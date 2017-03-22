@@ -1,0 +1,34 @@
+[ 245.128522][MRSG_Host0:master_mrsg] map 8873 assigned to MRSG_Host874 
+[ 245.133726][MRSG_Host0:master_mrsg] map 8874 assigned to MRSG_Host875 
+[ 365.137629][MRSG_Host0:master_mrsg]  
+[ 365.137629][MRSG_Host0:master_mrsg] MRSG_MAP PHASE DONE
+[ 365.137629][MRSG_Host0:master_mrsg]  
+[ 675.343221][MRSG_Host0:master_mrsg]  
+[ 675.343221][MRSG_Host0:master_mrsg] MRSG_REDUCE PHASE DONE
+[ 675.343221][MRSG_Host0:master_mrsg]  
+[ 675.343221][MRSG_Host0:master_mrsg] JOB CONFIGURATION:
+[ 675.343221][MRSG_Host0:master_mrsg] slots: 2 map, 2 reduce
+[ 675.343221][MRSG_Host0:master_mrsg] chunk replicas: 3
+[ 675.343221][MRSG_Host0:master_mrsg] chunk size: 64 MB
+[ 675.343221][MRSG_Host0:master_mrsg] input chunks: 8875
+[ 675.343221][MRSG_Host0:master_mrsg] input size: 568000 MB
+[ 675.343221][MRSG_Host0:master_mrsg] maps: 8875
+[ 675.343221][MRSG_Host0:master_mrsg] MRSG_map_output size: 228 Bytes
+[ 675.343221][MRSG_Host0:master_mrsg] reduces: 2000
+[ 675.343221][MRSG_Host0:master_mrsg] workers: 2000
+[ 675.343221][MRSG_Host0:master_mrsg] grid power: 1e+13 flops
+[ 675.343221][MRSG_Host0:master_mrsg] average power: 5e+09 flops/s
+[ 675.343221][MRSG_Host0:master_mrsg] mrsg_heartbeat interval: 20s
+[ 675.343221][MRSG_Host0:master_mrsg]  
+[ 675.343221][MRSG_Host0:master_mrsg] JOB STATISTICS:
+[ 675.343221][MRSG_Host0:master_mrsg] local maps: 8875
+[ 675.343221][MRSG_Host0:master_mrsg] non-local maps: 0
+[ 675.343221][MRSG_Host0:master_mrsg] speculative maps (local): 0
+[ 675.343221][MRSG_Host0:master_mrsg] speculative maps (remote): 0
+[ 675.343221][MRSG_Host0:master_mrsg] total non-local maps: 0
+[ 675.343221][MRSG_Host0:master_mrsg] total speculative maps: 0
+[ 675.343221][MRSG_Host0:master_mrsg] normal reduces: 2000
+[ 675.343221][MRSG_Host0:master_mrsg] speculative reduces: 0
+[ 675.343221][MRSG_Host0:master_mrsg]  
+[ 675.343221][MRSG_Host0:master_mrsg] JOB END
+
