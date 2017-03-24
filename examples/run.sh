@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 cd ..
 make clean all
 cd examples

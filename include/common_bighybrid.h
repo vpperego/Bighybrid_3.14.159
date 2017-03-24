@@ -41,7 +41,8 @@ double*     avg_task_exec_reduce;
 #define MRA_HEARTBEAT_TIMEOUT 600
 #define MRSG_HEARTBEAT_TIMEOUT 600
 
-
+#define ON 1
+#define OFF -1
 /* Short message names. */
 #define SMS_GET_MRA_CHUNK "SMS-MRA-GC"
 #define SMS_GET_MRSG_CHUNK "SMS-MRSG-GC"

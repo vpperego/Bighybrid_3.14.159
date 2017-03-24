@@ -88,8 +88,8 @@ int worker_mra (int argc, char* argv[])
     mra_kill_last_workers();
 
     mra_task_pid.workers_on--;
-    mra_task_pid.worker[get_mra_worker_id (me)+1] = -1;
-    mra_task_pid.status[get_mra_worker_id (me)+1] = OFF;
+    mra_task_pid.worker[get_mra_worker_id (mra_me)+1] = -1;
+    mra_task_pid.status[get_mra_worker_id (mra_me)+1] = OFF;
     return 0;
 }
 
