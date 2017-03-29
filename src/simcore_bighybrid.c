@@ -85,7 +85,7 @@ int BIGHYBRID_main (const char* plat, const char* depl, const char* conf, const 
    int argc = 8;
     char* argv[] = {
     "bighybrid",
-		"--cfg=tracing:yes",
+		"--cfg=tracing:no",
 		"--cfg=tracing/buffer:yes",
 		"--cfg=tracing/filename:tracefile.trace",
 		"--cfg=tracing/categorized:yes",

@@ -255,8 +255,10 @@ int main (int argc, char* argv[])
     // BIGHYBRID_main ("Tese-64-64.xml", "d-Tese-64-64.xml", "bighyb-plat64-64.conf","parser-boinc-1500.txt" );
      //BIGHYBRID_main ("Tese-64-80.xml", "d-Tese-64-80.xml", "bighyb-plat64-64.conf","parser-boinc-1500.txt" );
     //BIGHYBRID_main ("Tese-96-32.xml", "d-Tese-96-32.xml", "bighyb-plat64-64.conf","parser-boinc-1500.txt" );
-//   BIGHYBRID_main ("yh568-bighybrid-plat.xml", "d-yh568-bighybrid-plat.xml", "yh568-bighybrid.conf","parser-boinc-180.txt");
-   BIGHYBRID_main ("yh.xml", "d-yh.xml", "yh_206.conf","parser-boinc-180.txt");
+ //  BIGHYBRID_main ("yh568-bighybrid-plat.xml", "d-yh568-bighybrid-plat.xml", "yh568-bighybrid.conf","parser-boinc-180.txt");
+//   BIGHYBRID_main ("yh.xml", "d-yh.xml", "yh_206.conf","parser-boinc-180.txt");
+     //BIGHYBRID_main ("plat350-350.xml","d-plat350-350.xml","bighyb-plat350-350.conf","parser-boinc-080.txt");
+   BIGHYBRID_main ("yh.xml", "d-yh.xml", "yh568-bighybrid.conf","parser-boinc-180.txt");
      //BIGHYBRID_main ("plat350-350.xml","d-plat350-350.xml","bighyb-plat350-350.conf","parser-boinc-080.txt");
      //BIGHYBRID_main ("plat350-350.xml","d-plat350-350.xml","bighyb-plat350-350.conf","parser-boinc-080.txt");
     return 0;
