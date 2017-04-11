@@ -82,18 +82,6 @@ void print_bighybrid_output();
 int BIGHYBRID_main (const char* plat, const char* depl, const char* conf, const char* vc_file)
 {
 
-   int argc = 8;
-    char* argv[] = {
-    "bighybrid",
-		"--cfg=tracing:no",
-		"--cfg=tracing/buffer:yes",
-		"--cfg=tracing/filename:tracefile.trace",
-		"--cfg=tracing/categorized:yes",
-		"--cfg=tracing/uncategorized:yes",
-		"--cfg=viva/categorized:cat.plist",
-		"--cfg=viva/uncategorized:uncat.plist"
-    };
-
  		msg_error_t  res_bighybrid = MSG_OK;
 
 
@@ -103,9 +91,6 @@ int BIGHYBRID_main (const char* plat, const char* depl, const char* conf, const 
     check_config_mra ();
     check_config_mrsg ();
 
-//Initialize MRA and MRSG
-
-    MSG_init (&argc, argv);
 
 
     res_bighybrid = run_hybrid_simulation (plat, depl, conf, vc_file);
