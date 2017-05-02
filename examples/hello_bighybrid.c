@@ -259,7 +259,7 @@ int main (int argc, char* argv[])
  //  BIGHYBRID_main ("yh568-bighybrid-plat.xml", "d-yh568-bighybrid-plat.xml", "yh568-bighybrid.conf","parser-boinc-180.txt");
 //   BIGHYBRID_main ("yh.xml", "d-yh.xml", "yh_206.conf","parser-boinc-180.txt");
      //BIGHYBRID_main ("plat350-350.xml","d-plat350-350.xml","bighyb-plat350-350.conf","parser-boinc-080.txt");
-   BIGHYBRID_main (argv[argc-3],argv[argc-2],argv[argc-1],"parser-boinc-180.txt");
+   BIGHYBRID_main (argv[argc-3],argv[argc-2],argv[argc-1],"parser-boinc-1500.txt");
      //BIGHYBRID_main ("plat350-350.xml","d-plat350-350.xml","bighyb-plat350-350.conf","parser-boinc-080.txt");
      //BIGHYBRID_main ("plat350-350.xml","d-plat350-350.xml","bighyb-plat350-350.conf","parser-boinc-080.txt");
     return 0;
