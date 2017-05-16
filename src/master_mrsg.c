@@ -161,8 +161,8 @@ static void print_mrsg_stats (void)
     XBT_INFO ("total speculative maps: %d", stats_mrsg.map_spec_mrsg_l + stats_mrsg.map_spec_mrsg_r);
     XBT_INFO ("normal reduces: %d", stats_mrsg.reduce_mrsg_normal);
     XBT_INFO ("speculative reduces: %d", stats_mrsg.reduce_mrsg_spec);
-    XBT_INFO ("MAP Time: %fs",stats_mrsg.map_time);
-    XBT_INFO ("REDUCE Time: %fs",stats_mrsg.reduce_time);
+    XBT_INFO ("Map Time: %fs",stats_mrsg.map_time);
+    XBT_INFO ("Reduce Time: %fs",stats_mrsg.reduce_time);
     XBT_INFO (" ");
 }
 

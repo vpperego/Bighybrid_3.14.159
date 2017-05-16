@@ -1,6 +1,6 @@
 
 Experimento 50,
-		Load out 
+		Load out 133,
       MRA Machines 600,
       MRSG Machines 1400,
       MRSG net 1.25e+8,
@@ -18,7 +18,7 @@ Experimento 50,
       MRSG Reduce Cost 4.2e+14,
 
 Experimento 33, 
-		Load out
+		Load out 133,
       MRA Machines 400,
       MRSG Machines 1600,
       MRSG net 1.25e+8,
@@ -37,7 +37,7 @@ Experimento 33,
 
 
 Experimento 6,
-		Load out
+		Load out 3994,
       MRA Machines 200,
       MRSG Machines 1800,
       MRSG net 1.25e+8,
@@ -56,7 +56,7 @@ Experimento 6,
 
 
 Experimento 46, 
-		Load out
+		Load out 3994,
       MRA Machines 600,
       MRSG Machines 1400,
       MRSG net 1.25e+8,
@@ -75,7 +75,7 @@ Experimento 46,
 
 
 Experimento 20,
-		Load out
+		Load out 3994,
       MRA Machines 696,
       MRSG Machines 1800,
       MRSG net 1.25e+8,
@@ -94,7 +94,7 @@ Experimento 20,
 
 
 Experimento 21, 
-		Load out
+		Load out 3994,
       MRA Machines 696,
       MRSG Machines 1800,
       MRSG net 1.25e+8,
@@ -113,7 +113,7 @@ Experimento 21,
 
 
 Experimento 28, 
-		Load out
+		Load out 3994,
       MRA Machines 696,
       MRSG Machines 1800,
       MRSG net 1.25e+8,
