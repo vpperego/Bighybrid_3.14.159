@@ -231,6 +231,11 @@ double mrsg_task_cost_function (enum mrsg_phase_e mrsg_phase, size_t tid_mrsg, s
 int main (int argc, char* argv[])
 {
 
+  if(argc < 4)
+  {
+	printf("usage : %s plat.xml depoly.xml plat.conf",argv[0]);
+	exit(0);
+  }
   int sg_argc = argc -3;
   MSG_init (&sg_argc, argv);
     /* MRA_user_init must be called before setting the user functions. */

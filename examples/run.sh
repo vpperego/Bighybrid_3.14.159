@@ -1,7 +1,10 @@
 #!/bin/bash
 export LD_LIBRARY_PATH=$HOME/simgrid-3.14.159/lib
 
-
+MRSG_NET=()
+MRSG_LAT=()
+MRA_NET=()
+MRA_LAT=()
 MRA_MACHINES=()
 MRSG_MACHINES=()
 MSRG_CHUNK_COUNT=()
@@ -29,6 +32,10 @@ while read p; do
 		"MRA chunk"*)MRA_CHUNK_SIZE+=($(echo $p | grep -o "[0-9]*"));;
 		"MRSG chunk"*)MRSG_CHUNK_SIZE+=($(echo $p | grep -o "[0-9]*"));;
 		"Load out"*)LOAD_OUT+=($(echo $p | grep -o "[0-9]*"));;
+		"MRSG net"*)MRSG_NET+=($(echo $p | grep -o "[0-9]*.[0-9]*e+[0-9]*"));;
+		"MRSG lat"*)MRSG_LAT+=($(echo $p | grep -o "[0-9]*.[0-9]*e-[0-9]*"));;
+		"MRA net"*)MRA_NET+=($(echo $p | grep -o "[0-9]*.[0-9]*e+[0-9]*"));;
+		"MRA lat"*)MRA_LAT+=($(echo $p | grep -o "[0-9]*.[0-9]*e-[0-9]*"));;
 	esac
 
 done < experimentos.txt
@@ -40,8 +47,9 @@ cd ..
 make clean all
 cd examples/
 make clean all
+rm times.txt
 touch times.txt
-for e in $(seq 0 $numberExperiments)
+for e in $(seq 0 `expr $numberExperiments - 1`)
 do
 	WORKLOAD="Experiment_$e"
 	loadIN=$(echo "${MRA_CHUNK_COUNT[e]}+${MSRG_CHUNK_COUNT[e]}"| bc -l)
@@ -49,9 +57,10 @@ do
 	MRA_CHUNKS=$(echo "${MRA_CHUNK_COUNT[e]}/64"| bc -l)
 	MRSG_CHUNKS=${MRSG_CHUNKS%.*}
 	MRA_CHUNKS=${MRA_CHUNKS%.*}
+	echo "?????ERROR????? ${LOAD_OUT[e]}"
 	INTERMED_PERC=$(echo "${LOAD_OUT[e]}/$loadIN*100"| bc -l)
 
-	python create-bighybrid-plat.py $WORKLOAD.xml $MRA_MACHINES 2 4e9:6e9 1e-4 1.25e8 $MRSG_MACHINES 2 5e9 1e-4 1.25e8
+	python create-bighybrid-plat.py $WORKLOAD.xml ${MRA_MACHINES[e]} 2 4e9:6e9 ${MRA_LAT[e]} ${MRA_NET[e]} ${MRSG_MACHINES[e]} 2 5e9 ${MRSG_LAT[e]} ${MRSG_NET[e]}
 	python create-bighybrid-depoly.py $WORKLOAD.xml
 
 	echo "	mrsg_reduces `expr ${MRSG_MACHINES[e]} \* 2`
@@ -79,6 +88,7 @@ do
 	./hello_bighybrid.bin --cfg=tracing:no  $WORKLOAD.xml d-$WORKLOAD.xml $WORKLOAD.conf 2>&1| $HOME/simgrid-3.14.159/bin/colorize > $WORKLOAD.txt 
 	rm -f $WORKLOAD.xml
 	rm -f d-$WORKLOAD.xml
+	echo $WORKLOAD >> times.txt
 	cat $WORKLOAD.txt | grep "Map Time: " >> times.txt
 	cat $WORKLOAD.txt | grep "Reduce Time: " >> times.txt
 done

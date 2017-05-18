@@ -153,11 +153,12 @@ int master_mra (int argc, char* argv[])
 
         if (status_mra == MSG_OK)
         {
+      //    XBT_INFO("MSG_OK!");
+
             worker = MSG_task_get_source (msg_mra);
             mra_wid = get_mra_worker_id (worker);
             /** @brief Identifies a new Worker */
             //time_ctl = (int) control_timestamp;
-
 
             //=====
             if (mra_message_is (msg_mra, SMS_HEARTBEAT_MRA) )
@@ -227,6 +228,7 @@ int master_mra (int argc, char* argv[])
             }
             //=====
 
+
             if (mra_message_is (msg_mra, SMS_HEARTBEAT_MRA))
             {
 
@@ -268,9 +270,9 @@ int master_mra (int argc, char* argv[])
                     }
                 }
             }
-
             else if (mra_message_is (msg_mra, SMS_TASK_MRA_DONE))
             {
+  //            XBT_INFO("MSG_OK 2");
                 ti = (mra_task_info_t) MSG_task_get_data (msg_mra);
 
                 if (job_mra.task_status[ti->mra_phase][ti->mra_tid] != T_STATUS_MRA_DONE)
@@ -278,6 +280,7 @@ int master_mra (int argc, char* argv[])
                     //if (behavior[ti->mra_wid] == VC_NORMAL)
                      if (mra_ftm_done_s[ti->mra_wid].mra_ft_vcstat == OPERATION)
                     {
+
 
                         job_mra.task_status[ti->mra_phase][ti->mra_tid] = T_STATUS_MRA_DONE;
 
@@ -294,10 +297,11 @@ int master_mra (int argc, char* argv[])
                           {
                             mra_dfs_dist[ti->mra_wid].mra_dist_data[MRA_MAP]--;
                           }
+                            //XBT_INFO("MSG_OK 3!!!");
+                        //  finish_all_mra_task_copies (ti);
+                      //    XBT_INFO("MSG_OK 4!!!");
 
-                          finish_all_mra_task_copies (ti);
                           job_mra.tasks_pending[ti->mra_phase]--;
-
                         // XBT_INFO ("Work_id %zd @ Phase %s,Task %zd Done - Dist %d - Dist Data %d \n", mra_ftm_done_f.mra_ft_wid, (mra_ftm_done_f.mra_ft_phase==MRA_MAP?"MRA_MAP":"MRA_REDUCE"), mra_ftm_done_f.mra_ft_task_id, mra_dfs_dist[ti->mra_wid].dist_bruta, mra_dfs_dist[ti->mra_wid].mra_dist_data[MRA_MAP]);
 
 
@@ -334,6 +338,7 @@ int master_mra (int argc, char* argv[])
                 }
                 xbt_free_ref (&ti);
             }
+          //  XBT_INFO("MSG_OK 5!!!");
             MSG_task_destroy (msg_mra);
 
         }
