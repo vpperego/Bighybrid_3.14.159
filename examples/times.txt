@@ -1,0 +1,31 @@
+Experiment_0
+[00m[ 2593.789779][33m[MRSG_Host0:master_mrsg] Map Time: 977.218674s[00m
+[00m[ 3056.347042][32m[ MRA_Host0:master_mra] Map Time: 1245.967900[00m
+[00m[ 2593.789779][33m[MRSG_Host0:master_mrsg] Reduce Time: 1616.571105s[00m
+[00m[ 3056.347042][32m[ MRA_Host0:master_mra] Reduce Time: 1810.379142[00m
+Experiment_1
+[00m[ 2577.094293][33m[MRSG_Host0:master_mrsg] Map Time: 980.364851s[00m
+[00m[ 2608.355377][32m[ MRA_Host0:master_mra] Map Time: 1223.403155[00m
+[00m[ 2577.094293][33m[MRSG_Host0:master_mrsg] Reduce Time: 1596.729442s[00m
+[00m[ 2608.355377][32m[ MRA_Host0:master_mra] Reduce Time: 1384.952222[00m
+Experiment_2
+[00m[ 810.478768][33m[MRSG_Host0:master_mrsg] Map Time: 263.486220s[00m
+[00m[ 2030.574650][32m[ MRA_Host0:master_mra] Map Time: 508.716910[00m
+[00m[ 810.478768][33m[MRSG_Host0:master_mrsg] Reduce Time: 546.992548s[00m
+[00m[ 2030.574650][32m[ MRA_Host0:master_mra] Reduce Time: 1521.857739[00m
+Experiment_3
+[00m[ 918.258061][32m[ MRA_Host0:master_mra] Map Time: 323.675262[00m
+[00m[ 963.766240][33m[MRSG_Host0:master_mrsg] Map Time: 266.795137s[00m
+[00m[ 918.258061][32m[ MRA_Host0:master_mra] Reduce Time: 594.582799[00m
+[00m[ 963.766240][33m[MRSG_Host0:master_mrsg] Reduce Time: 696.971104s[00m
+Experiment_4
+[00m[ 726.629730][33m[MRSG_Host0:master_mrsg] Map Time: 197.452578s[00m
+[00m[ 1139.465663][32m[ MRA_Host0:master_mra] Map Time: 317.098227[00m
+[00m[ 726.629730][33m[MRSG_Host0:master_mrsg] Reduce Time: 529.177153s[00m
+[00m[ 1139.465663][32m[ MRA_Host0:master_mra] Reduce Time: 822.367435[00m
+Experiment_5
+[00m[ 726.631178][33m[MRSG_Host0:master_mrsg] Map Time: 197.452600s[00m
+[00m[ 1434.703140][32m[ MRA_Host0:master_mra] Map Time: 585.488615[00m
+[00m[ 726.631178][33m[MRSG_Host0:master_mrsg] Reduce Time: 529.178578s[00m
+[00m[ 1434.703140][32m[ MRA_Host0:master_mra] Reduce Time: 849.214525[00m
+Experiment_6

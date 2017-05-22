@@ -1,0 +1,11 @@
+[37m[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing' to 'no'
+[37mInvalid XML (XML input line 1957, state 7): EOF in literal (`"' expected).
+[37m[0.000000] /home/vinicius/simgrid-3.14.159/src/simix/smx_deployment.cpp:53: [root/CRITICAL] Parse error at d-6001400.xml:1957
+[37mBacktrace (displayed in process maestro):
+[37m---> xbt_backtrace_display_current at /home/vinicius/simgrid-3.14.159/src/xbt/backtrace.cpp:52, 0x7fef6b9526f2
+[37m---> SIMIX_launch_application at /home/vinicius/simgrid-3.14.159/src/simix/smx_deployment.cpp:45, 0x7fef6b89c636
+[37m---> MSG_launch_application at /home/vinicius/simgrid-3.14.159/src/msg/msg_deployment.cpp:26, 0x7fef6b87c737
+[37m---> run_hybrid_simulation at /home/vinicius/Documents/Bighybrid_3.14.159/src/simcore_bighybrid.c:161, 0x402ab5
+[37m---> BIGHYBRID_main at /home/vinicius/Documents/Bighybrid_3.14.159/src/simcore_bighybrid.c:96, 0x402721
+[37m---> main at ??:?, 0x402621
+[00m

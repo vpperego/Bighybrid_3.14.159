@@ -38,7 +38,7 @@ while read p; do
 		"MRA lat"*)MRA_LAT+=($(echo $p | grep -o "[0-9]*.[0-9]*e-[0-9]*"));;
 	esac
 
-done < experimentos.txt
+done < experimento_debug.txt
 
 
 numberExperiments=${#MRA_MACHINES[@]}
@@ -51,49 +51,46 @@ rm times.txt
 touch times.txt
 for e in $(seq 0 `expr $numberExperiments - 1`)
 do
-	for n in $(seq 0 2)
-	do
-		WORKLOAD="Experiment_$e"
-		loadIN=$(echo "${MRA_CHUNK_COUNT[e]}+${MSRG_CHUNK_COUNT[e]}"| bc -l)
-		MRSG_CHUNKS=$(echo "${MSRG_CHUNK_COUNT[e]}/64"| bc -l)
-		MRA_CHUNKS=$(echo "${MRA_CHUNK_COUNT[e]}/64"| bc -l)
-		MRSG_CHUNKS=${MRSG_CHUNKS%.*}
-		MRA_CHUNKS=${MRA_CHUNKS%.*}
+	WORKLOAD="Experiment_$e"
+	loadIN=$(echo "${MRA_CHUNK_COUNT[e]}+${MSRG_CHUNK_COUNT[e]}"| bc -l)
+	MRSG_CHUNKS=$(echo "${MSRG_CHUNK_COUNT[e]}/64"| bc -l)
+	MRA_CHUNKS=$(echo "${MRA_CHUNK_COUNT[e]}/64"| bc -l)
+	MRSG_CHUNKS=${MRSG_CHUNKS%.*}
+	MRA_CHUNKS=${MRA_CHUNKS%.*}
+	echo "?????ERROR????? ${LOAD_OUT[e]}"
+	INTERMED_PERC=$(echo "${LOAD_OUT[e]}/$loadIN*100"| bc -l)
 
-		INTERMED_PERC=$(echo "${LOAD_OUT[e]}/$loadIN*100"| bc -l)
+	python create-bighybrid-plat.py $WORKLOAD.xml ${MRA_MACHINES[e]} 2 4e9:6e9 ${MRA_LAT[e]} ${MRA_NET[e]} ${MRSG_MACHINES[e]} 2 5e9 ${MRSG_LAT[e]} ${MRSG_NET[e]}
+	python create-bighybrid-depoly.py $WORKLOAD.xml
 
-		python create-bighybrid-plat.py $WORKLOAD.xml ${MRA_MACHINES[e]} 2 4e9:6e9 ${MRA_LAT[e]} ${MRA_NET[e]} ${MRSG_MACHINES[e]} 2 5e9 ${MRSG_LAT[e]} ${MRSG_NET[e]}
-		python create-bighybrid-depoly.py $WORKLOAD.xml
+	echo "	mrsg_reduces `expr ${MRSG_MACHINES[e]} \* 2`
+	mrsg_chunk_size 64
+	mrsg_input_chunks $MRSG_CHUNKS
+	mrsg_dfs_replicas 3
+	mrsg_map_slots 2
+	mrsg_reduce_slots 2
+	mrsg_intermed_perc $INTERMED_PERC 
+	mrsg_map_task_cost ${MRSG_MAP_COST[e]}
+	mrsg_reduce_task_cost ${MRSG_REDUCE_COST[e]}
 
-		echo "	mrsg_reduces `expr ${MRSG_MACHINES[e]} \* 2`
-		mrsg_chunk_size 64
-		mrsg_input_chunks $MRSG_CHUNKS
-		mrsg_dfs_replicas 3
-		mrsg_map_slots 2
-		mrsg_reduce_slots 2
-		mrsg_intermed_perc $INTERMED_PERC 
-		mrsg_map_task_cost ${MRSG_MAP_COST[e]}
-		mrsg_reduce_task_cost ${MRSG_REDUCE_COST[e]}
-
-		mra_reduces `expr ${MRA_MACHINES[e]} \* 2`
-		mra_chunk_size 64
-		mra_input_chunks $MRA_CHUNKS
-		mra_dfs_replicas 5
-		mra_map_slots 2
-		mra_reduce_slots 2
-		mra_intermed_perc $INTERMED_PERC
-		perc_num_volatile_node ${PERC_VOLATILITE[e]}
-		grain_factor 1
-		failure_timeout 4.0
-		mra_map_task_cost ${MRA_MAP_COST[e]}
-		mra_reduce_task_cost ${MRA_REDUCE_COST[e]}" > $WORKLOAD.conf
-		./hello_bighybrid.bin --cfg=tracing:no  $WORKLOAD.xml d-$WORKLOAD.xml $WORKLOAD.conf 2>&1| $HOME/simgrid-3.14.159/bin/colorize > $WORKLOAD.txt 
-		rm -f $WORKLOAD.xml
-		rm -f d-$WORKLOAD.xml
-		echo $WORKLOAD >> times.txt
-		cat $WORKLOAD.txt | grep "Map Time: " >> times.txt
-		cat $WORKLOAD.txt | grep "Reduce Time: " >> times.txt
-	done
+	mra_reduces `expr ${MRA_MACHINES[e]} \* 2`
+	mra_chunk_size 64
+	mra_input_chunks $MRA_CHUNKS
+	mra_dfs_replicas 5
+	mra_map_slots 2
+	mra_reduce_slots 2
+	mra_intermed_perc $INTERMED_PERC
+	perc_num_volatile_node ${PERC_VOLATILITE[e]}
+	grain_factor 1
+	failure_timeout 4.0
+	mra_map_task_cost ${MRA_MAP_COST[e]}
+	mra_reduce_task_cost ${MRA_REDUCE_COST[e]}" > $WORKLOAD.conf
+#	./hello_bighybrid.bin --cfg=tracing:no  $WORKLOAD.xml d-$WORKLOAD.xml $WORKLOAD.conf 2>&1| $HOME/simgrid-3.14.159/bin/colorize > $WORKLOAD.txt 
+#	rm -f $WORKLOAD.xml
+#	rm -f d-$WORKLOAD.xml
+#	echo $WORKLOAD >> times.txt
+#	cat $WORKLOAD.txt | grep "Map Time: " >> times.txt
+#	cat $WORKLOAD.txt | grep "Reduce Time: " >> times.txt
 done
 #python create-bighybrid-plat.py fb.xml 3000 2 5e9 1e-4 1.25e8
 #python create-bighybrid-depoly.py yh.xml
