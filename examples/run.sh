@@ -1,6 +1,8 @@
 #!/bin/bash
 export LD_LIBRARY_PATH=$HOME/simgrid-3.14.159/lib
 
+CORES=$(nproc)
+AVAILABLE_CORES=$(expr `CORES - 1`)
 MRSG_NET=()
 MRSG_LAT=()
 MRA_NET=()
@@ -17,7 +19,7 @@ MRA_MAP_COST=()
 MRA_REDUCE_COST=()
 PERC_VOLATILITE=()
 LOAD_OUT=()
-
+RUNNING_PIDS=()
 while read p; do
 	case $p in
 		"MRA Machines"*) MRA_MACHINES+=($(echo $p | grep -o "[0-9]*"));;
@@ -53,7 +55,7 @@ for e in $(seq 0 `expr $numberExperiments - 1`)
 do
 	for n in $(seq 0 2)
 	do
-		WORKLOAD="Experiment_$e"
+		WORKLOAD="Experiment_$e.$n"
 		loadIN=$(echo "${MRA_CHUNK_COUNT[e]}+${MSRG_CHUNK_COUNT[e]}"| bc -l)
 		MRSG_CHUNKS=$(echo "${MSRG_CHUNK_COUNT[e]}/64"| bc -l)
 		MRA_CHUNKS=$(echo "${MRA_CHUNK_COUNT[e]}/64"| bc -l)
@@ -87,7 +89,24 @@ do
 		failure_timeout 4.0
 		mra_map_task_cost ${MRA_MAP_COST[e]}
 		mra_reduce_task_cost ${MRA_REDUCE_COST[e]}" > $WORKLOAD.conf
-		./hello_bighybrid.bin --cfg=tracing:no  $WORKLOAD.xml d-$WORKLOAD.xml $WORKLOAD.conf 2>&1| $HOME/simgrid-3.14.159/bin/colorize > $WORKLOAD.txt 
+		if [$AVAILABLE_CORES > 1]
+			./hello_bighybrid.bin --cfg=tracing:no  $WORKLOAD.xml d-$WORKLOAD.xml $WORKLOAD.conf 2>&1| $HOME/simgrid-3.14.159/bin/colorize > $WORKLOAD.txt &
+			$RUNNING_PIDS+=($!)
+			$AVAILABLE_CORES=$(`expr $AVAILABLE_CORES - 1`)
+			
+		else
+			while :
+			do
+				for p in $(seq 0 $RUNNING_PID)
+					if [ps -p ${RUNNING_PIDS[p]} > /dev/null]
+						$AVAILABLE_CORES=$(`expr $AVAILABLE_CORES + 1`)
+						del=(${RUNNING_PIDS[p]})
+						RUNNING_PIDS=(${RUNNING_PIDS[@]/$del})
+						break 2
+					fi
+				done
+			done
+		fi
 		rm -f $WORKLOAD.xml
 		rm -f d-$WORKLOAD.xml
 		echo $WORKLOAD >> times.txt
