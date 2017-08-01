@@ -231,9 +231,9 @@ double mrsg_task_cost_function (enum mrsg_phase_e mrsg_phase, size_t tid_mrsg, s
 int main (int argc, char* argv[])
 {
 
-  if(argc < 4)
+  if(argc < 5)
   {
-	printf("usage : %s plat.xml depoly.xml plat.conf",argv[0]);
+	printf("usage : %s plat.xml depoly.xml plat.conf machines-trace.txt",argv[0]);
 	exit(0);
   }
   int sg_argc = argc -3;
@@ -264,7 +264,7 @@ int main (int argc, char* argv[])
  //  BIGHYBRID_main ("yh568-bighybrid-plat.xml", "d-yh568-bighybrid-plat.xml", "yh568-bighybrid.conf","parser-boinc-180.txt");
 //   BIGHYBRID_main ("yh.xml", "d-yh.xml", "yh_206.conf","parser-boinc-180.txt");
      //BIGHYBRID_main ("plat350-350.xml","d-plat350-350.xml","bighyb-plat350-350.conf","parser-boinc-080.txt");
-   BIGHYBRID_main (argv[argc-3],argv[argc-2],argv[argc-1],"parser-boinc-1500.txt");
+   BIGHYBRID_main (argv[argc-4],argv[argc-3],argv[argc-2],argv[argc-1]);
      //BIGHYBRID_main ("plat350-350.xml","d-plat350-350.xml","bighyb-plat350-350.conf","parser-boinc-080.txt");
      //BIGHYBRID_main ("plat350-350.xml","d-plat350-350.xml","bighyb-plat350-350.conf","parser-boinc-080.txt");
     return 0;

@@ -16,6 +16,6 @@ all: $(BIN)
 	$(CC) $(INCLUDES) $(DEFS) -o $@ $^ ../libbighybrid.a $(LDADD)
 
 clean:
-	rm -vf *.bin *.csv *.trace *.plist *.log
+	rm -vf *.bin *.trace *.plist *.log
 
 .PHONY: clean
