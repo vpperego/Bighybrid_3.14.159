@@ -81,7 +81,6 @@ void print_bighybrid_output();
 
 int BIGHYBRID_main (const char* plat, const char* depl, const char* conf, const char* vc_file)
 {
-
  		msg_error_t  res_bighybrid = MSG_OK;
 
 
@@ -136,11 +135,14 @@ static msg_error_t run_hybrid_simulation (const char* platform_file, const char*
 {
     msg_error_t  res_bighybrid = MSG_OK;
 
+
     read_bighybrid_config_file (bighybrid_config_file);
+
 
 		init_mra_vc (vc_file_name);
 
 		read_bandwidth_mra (platform_file);
+
 
     MSG_create_environment (platform_file);
 
@@ -155,6 +157,7 @@ static msg_error_t run_hybrid_simulation (const char* platform_file, const char*
     MSG_function_register ("master_mrsg", master_mrsg);
     MSG_function_register ("worker_mra", worker_mra);
     MSG_function_register ("worker_mrsg", worker_mrsg);
+
 
     MSG_launch_application (deploy_file);
 

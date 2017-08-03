@@ -230,14 +230,6 @@ double mrsg_task_cost_function (enum mrsg_phase_e mrsg_phase, size_t tid_mrsg, s
 
 int main (int argc, char* argv[])
 {
-
-  if(argc < 5)
-  {
-	printf("usage : %s plat.xml depoly.xml plat.conf machines-trace.txt",argv[0]);
-	exit(0);
-  }
-  int sg_argc = argc -3;
-  MSG_init (&sg_argc, argv);
     /* MRA_user_init must be called before setting the user functions. */
     MRA_user_init ();
     /* MRSG_user_init must be called before setting the user functions. */
@@ -253,19 +245,28 @@ int main (int argc, char* argv[])
 
 
     /* Run the MRSG simulation. */
-   // mrsg_input_main = {"g5k.xml", "hello.deploy.xml", "hello_mrsg.conf"};
-//   BIGHYBRID_main ("32_32.xml", "d-32_32.xml", "bighyb-plat32-32.conf","parser-boinc-1500.txt" );
+     //BIGHYBRID_main ("plat350-350.xml","d-plat350-350.xml","bighyb-plat350-350.conf","parser-boinc-080.txt");
 
-    /* Run the BigHybrid simulation. */
-    //BIGHYBRID_main ("bighyb-plat5hom_15het.xml", "d-bighyb-plat5hom_15het.xml", "bighyb-plat5-15.conf","parser-boinc-080.txt" );
-    // BIGHYBRID_main ("Tese-64-64.xml", "d-Tese-64-64.xml", "bighyb-plat64-64.conf","parser-boinc-1500.txt" );
-     //BIGHYBRID_main ("Tese-64-80.xml", "d-Tese-64-80.xml", "bighyb-plat64-64.conf","parser-boinc-1500.txt" );
-    //BIGHYBRID_main ("Tese-96-32.xml", "d-Tese-96-32.xml", "bighyb-plat64-64.conf","parser-boinc-1500.txt" );
- //  BIGHYBRID_main ("yh568-bighybrid-plat.xml", "d-yh568-bighybrid-plat.xml", "yh568-bighybrid.conf","parser-boinc-180.txt");
-//   BIGHYBRID_main ("yh.xml", "d-yh.xml", "yh_206.conf","parser-boinc-180.txt");
-     //BIGHYBRID_main ("plat350-350.xml","d-plat350-350.xml","bighyb-plat350-350.conf","parser-boinc-080.txt");
-   BIGHYBRID_main (argv[argc-4],argv[argc-3],argv[argc-2],argv[argc-1]);
-     //BIGHYBRID_main ("plat350-350.xml","d-plat350-350.xml","bighyb-plat350-350.conf","parser-boinc-080.txt");
-     //BIGHYBRID_main ("plat350-350.xml","d-plat350-350.xml","bighyb-plat350-350.conf","parser-boinc-080.txt");
+     /*
+       Check the args given in the command line:
+         < 5 : invalid (something is missing)
+         = 5 : no simgrid arg
+         > 5 : simgrid arg
+     */
+     if(argc < 5)
+     {
+     	printf("usage : %s plat.xml depoly.xml plat.conf machines-trace.txt",argv[0]);
+     	exit(0);
+     }else if (argc == 5){
+      int sg_argc = argc -4;
+      MSG_init (&sg_argc, argv);
+      BIGHYBRID_main (argv[argc-4],argv[argc-3],argv[argc-2],argv[argc-1]);
+
+     }else{
+       int sg_argc = argc -4;
+       MSG_init (&sg_argc, argv);
+       BIGHYBRID_main (argv[sg_argc+1],argv[sg_argc+2], argv[sg_argc+3],argv[sg_argc+4]);
+     }
+
     return 0;
 }

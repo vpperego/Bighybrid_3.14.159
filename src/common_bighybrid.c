@@ -213,7 +213,13 @@ size_t reduce_mrsg_input_size (size_t mrsg_rid)
 */
 void read_bandwidth_mra (const char* plat)
 {
+
 		FILE * xml = fopen(plat,"r");
+    if(xml==NULL)
+    {
+      printf("Error: plat file not found\n");
+      exit(1);
+    }
 	char buff[255];
 	char * token;
 
