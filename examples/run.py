@@ -6,17 +6,56 @@ import multiprocessing
 import argparse
 import csv
 import sys
+import thread
+import threading
+
 
 def main():
     args = readArgs()
     trace = args.trace
 
     if trace==False:
-        numCores = multiprocessing.cpu_count()
+        numCores = multiprocessing.cpu_count() -1 
+        print "paral " + str(numCores) 
+        mraCsv  = csv.reader(args.mra,delimiter=',')
+        mrsgCsv = csv.reader(args.mrsg,delimiter=',')
+        threadLock = threading.Lock()
+        print "lock?"
+        # Skip the labels row (i.e., the first row )
+        confFields= mrsgCsv.next()[5:]
+        confFields= confFields + mraCsv.next()[5:]
+        row =0
+        print "witf"
+        for core in range(numCores):
+            print "inew thread..."
+            thread.start_new_thread(runParallelTest,(args.mra,args.mrsg,args.parser,threadLock,row))
     else:
-        numCores = 1
-    
-    runTests(args.mra,args.mrsg,args.parser)
+        print "normal"
+        runTests(args.mra,args.mrsg,args.parser)
+
+def runParallelTest(mraCsv,mrsgCsv,parser,threadLock,row):
+    print "paralel"
+
+    while True:
+	try:
+                threadLock.acquire()
+                mra  = mraCsv.next()
+                mrsg = mrsgCsv.next()
+            # Take the first five fields of both csv to generate the bighybrid plat file
+	        mraPlat = " ".join(mra[:5])
+	        mrsgPlat = " ".join(mrsg[:5])
+                platFile = "Exp_" + str(row) 
+                
+                row = row +1
+                threadLock.release()
+                os.system("python create-bighybrid-plat.py "+platFile + ".xml " + mraPlat +" "+ mrsgPlat)
+	        os.system("python create-bighybrid-depoly.py "+ platFile+ ".xml ")
+                createConfFile(platFile,confFields,mrsg[5:]+mra[5:])
+                params= platFile+ ".xml d-"+ platFile +".xml " + platFile + ".conf "+ parser 
+                os.system("./hello_bighybrid.bin "+ params)
+	except Exception :
+	    print "gotcha"
+            break
 
 
 """
@@ -47,12 +86,6 @@ def runTests(mraFile,mrsgFile,parser):
 	except Exception :
 	    print "gotcha"
             break
-
-    #for row in mrsgCsv:
-    #    print row
-
-    #os.system("python create-bighybrid-plat.py "+ str(n) +" " + mraPlat +" " mrsgPlat)
-    #os.system("python create-bighybrid-depoly.py" + str(n))
 
 #Define and return the Args
 def readArgs():
