@@ -1,14 +1,11 @@
 #!/usr/bin/env python
-
 #USAGE ./run.py -trace[optinal] [experimentos.csv] [parser.txt] [plat.xml] [d-plat.xml]
 import os
 import multiprocessing
 import argparse
 import csv
 import sys
-import thread
-import threading
-
+import ctypes
 
 def main():
     args = readArgs()
@@ -16,43 +13,60 @@ def main():
 
     if trace==False:
         numCores = multiprocessing.cpu_count() -1 
-        print "paral " + str(numCores) 
-        mraCsv  = csv.reader(args.mra,delimiter=',')
-        mrsgCsv = csv.reader(args.mrsg,delimiter=',')
-        threadLock = threading.Lock()
-        print "lock?"
+#        print "paral " + str(numCores) 
+        mraCsv =  multiprocessing.Value(ctypes.py_object)  
+	mraCsv.value  = csv.reader(args.mra,delimiter=',')
+         
+        mrsgCsv =  multiprocessing.Value(ctypes.py_object)  
+	mrsgCsv.value = csv.reader(args.mrsg,delimiter=',')
+        processLock = multiprocessing.Lock()
+        test = mraCsv 
         # Skip the labels row (i.e., the first row )
-        confFields= mrsgCsv.next()[5:]
-        confFields= confFields + mraCsv.next()[5:]
+        confFields= mrsgCsv.value.next()[5:]
+        confFields= confFields + mraCsv.value.next()[5:]
         row =0
-        print "witf"
-        for core in range(numCores):
-            print "inew thread..."
-            thread.start_new_thread(runParallelTest,(args.mra,args.mrsg,args.parser,threadLock,row))
+       
+	for core in range(numCores):
+           
+            newThread = multiprocessing.Process(target=runParallelTest,args=(mraCsv,mrsgCsv,args.parser,processLock,row))
+ 	    newThread.start()
+	    #newThread.join()
+#	    newThread.run()	 
     else:
         print "normal"
         runTests(args.mra,args.mrsg,args.parser)
 
-def runParallelTest(mraCsv,mrsgCsv,parser,threadLock,row):
+def runParallelTest(mraCsv,mrsgCsv,parser,processLock,row):
     print "paralel"
 
     while True:
 	try:
-                threadLock.acquire()
-                mra  = mraCsv.next()
-                mrsg = mrsgCsv.next()
+	#	print "Im trying..."
+                #processLock.acquire()
+		with mraCsv.get_lock():
+		 	print "with"
+			mra  = mraCsv.value.next()
+			print "u"
+			#mraCsv.value = mraCsv.value.next()
+	        	print"thout"
+		print "try..."        
+		with mrsgCsv.get_lock():
+                	mrsg = mrsgCsv.value.next()
             # Take the first five fields of both csv to generate the bighybrid plat file
 	        mraPlat = " ".join(mra[:5])
 	        mrsgPlat = " ".join(mrsg[:5])
                 platFile = "Exp_" + str(row) 
                 
                 row = row +1
-                threadLock.release()
-                os.system("python create-bighybrid-plat.py "+platFile + ".xml " + mraPlat +" "+ mrsgPlat)
+               # processLock.release()
+		print "mraPlat:" + mraPlat
+                print "mrsgPlat:" + mrsgPlat
+		os.system("python create-bighybrid-plat.py "+platFile + ".xml " + mraPlat +" "+ mrsgPlat)
 	        os.system("python create-bighybrid-depoly.py "+ platFile+ ".xml ")
                 createConfFile(platFile,confFields,mrsg[5:]+mra[5:])
                 params= platFile+ ".xml d-"+ platFile +".xml " + platFile + ".conf "+ parser 
                 os.system("./hello_bighybrid.bin "+ params)
+		print "run ok"
 	except Exception :
 	    print "gotcha"
             break
@@ -71,8 +85,8 @@ def runTests(mraFile,mrsgFile,parser):
     row = 0
     while True:
 	try:
-                mra  = mraCsv.next()
-                mrsg = mrsgCsv.next()
+                mra  = mraCsv.value.next()
+                mrsg = mrsgCsv.value.next()
             # Take the first five fields of both csv to generate the bighybrid plat file
 	        mraPlat = " ".join(mra[:5])
 	        mrsgPlat = " ".join(mrsg[:5])
