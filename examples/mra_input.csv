@@ -1,2 +1,2 @@
 machines,cores_per_node,cpu_power,lat,bandwidth,mra_reduces,mra_chunk_size,mra_input_chunks,mra_dfs_replicas,mra_map_slots,mra_reduce_slots,mra_intermed_perc,mra_map_task_cost,mra_reduce_task_cost,perc_num_volatile_node,grain_factor,failure_timeout
-100,2,1.0e+9,1.0e-4,1.25e8,200,64,68,3,2,2,0.75,1.0e9,1.0e9,10,3,3
+100,2,1.0e9,1.0e-4,1.25e8,200,64,68,3,2,2,0.75,1.0e+1,1.0e+2,10,3,3

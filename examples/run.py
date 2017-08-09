@@ -7,71 +7,67 @@ import csv
 import sys
 import ctypes
 
+"""
+    read the content of a csv and return the
+    
+"""
+def csvToList(csvFile):
+    csvContent = csv.reader(csvFile,delimiter=',')
+    csvList=[]
+    while True:
+        try:
+            csvList.append(csvContent.next())
+	except Exception :
+	    return csvList
+            break
+
+
 def main():
     args = readArgs()
     trace = args.trace
 
     if trace==False:
         numCores = multiprocessing.cpu_count() -1 
-#        print "paral " + str(numCores) 
-        mraCsv =  multiprocessing.Value(ctypes.py_object)  
-	mraCsv.value  = csv.reader(args.mra,delimiter=',')
+        mraCsv  = csvToList(args.mra)
          
-        mrsgCsv =  multiprocessing.Value(ctypes.py_object)  
-	mrsgCsv.value = csv.reader(args.mrsg,delimiter=',')
-        processLock = multiprocessing.Lock()
-        test = mraCsv 
+        mrsgCsv = csvToList(args.mrsg)
+        if len(mraCsv)!=len(mrsgCsv):
+            print "ERROR: input files doesn't have same rows size!"
+            sys.exit()
         # Skip the labels row (i.e., the first row )
-        confFields= mrsgCsv.value.next()[5:]
-        confFields= confFields + mraCsv.value.next()[5:]
-        row =0
+        row = multiprocessing.Value('i',0)
        
 	for core in range(numCores):
            
-            newThread = multiprocessing.Process(target=runParallelTest,args=(mraCsv,mrsgCsv,args.parser,processLock,row))
- 	    newThread.start()
-	    #newThread.join()
-#	    newThread.run()	 
+            newProcess = multiprocessing.Process(target=runParallelTest,args=(mraCsv,mrsgCsv,args.parser,row))
+ 	    newProcess.start()
     else:
-        print "normal"
         runTests(args.mra,args.mrsg,args.parser)
 
-def runParallelTest(mraCsv,mrsgCsv,parser,processLock,row):
-    print "paralel"
-
+def runParallelTest(mraCsv,mrsgCsv,parser,row):
+    confFields= mrsgCsv[0][5:]
+    confFields= confFields + mraCsv[0][5:]
+     
     while True:
-	try:
-	#	print "Im trying..."
-                #processLock.acquire()
-		with mraCsv.get_lock():
-		 	print "with"
-			mra  = mraCsv.value.next()
-			print "u"
-			#mraCsv.value = mraCsv.value.next()
-	        	print"thout"
-		print "try..."        
-		with mrsgCsv.get_lock():
-                	mrsg = mrsgCsv.value.next()
-            # Take the first five fields of both csv to generate the bighybrid plat file
-	        mraPlat = " ".join(mra[:5])
-	        mrsgPlat = " ".join(mrsg[:5])
-                platFile = "Exp_" + str(row) 
-                
-                row = row +1
-               # processLock.release()
-		print "mraPlat:" + mraPlat
-                print "mrsgPlat:" + mrsgPlat
-		os.system("python create-bighybrid-plat.py "+platFile + ".xml " + mraPlat +" "+ mrsgPlat)
-	        os.system("python create-bighybrid-depoly.py "+ platFile+ ".xml ")
-                createConfFile(platFile,confFields,mrsg[5:]+mra[5:])
-                params= platFile+ ".xml d-"+ platFile +".xml " + platFile + ".conf "+ parser 
-                os.system("./hello_bighybrid.bin "+ params)
-		print "run ok"
-	except Exception :
-	    print "gotcha"
-            break
-
-
+	with row.get_lock():
+            row.value+=1
+            if len(mrsgCsv) <= row.value:
+                sys.exit()
+        
+        platFile = "Exp_" + str(row.value) 
+        mraPlat = " ".join(mraCsv[row.value][:5])
+        mrsgPlat = " ".join(mrsgCsv[row.value][:5])
+        platFile = "Exp_" + str(row.value) 
+        print "Plat: "+ platFile +" MRA:" +mraPlat+" MRSG:" + mrsgPlat
+        os.system("python create-bighybrid-plat.py "+platFile + ".xml " + mraPlat +" "+ mrsgPlat)
+        os.system("python create-bighybrid-depoly.py "+ platFile+ ".xml ")
+       
+        createConfFile(platFile,confFields,mrsgCsv[row.value][5:]+mraCsv[row.value][5:])
+        params= platFile+ ".xml d-"+ platFile +".xml " + platFile + ".conf "+ parser 
+        print "Running main ..."
+        os.system("./hello_bighybrid.bin "+ params)
+        print "run ok"
+	
 """
         Main script function.
         Creates all input files for bighybrid and run tests
@@ -114,10 +110,9 @@ def readArgs():
 
 #Creates the .conf file (i.e., the workload file) for the given experiment
 def createConfFile(fileName,fields,data):
-    print "will open file"
     with open(fileName+".conf",'w') as confFile:
-        print "Working?"
         for i in range(len(fields)):
+            print fields[i] + ": "+ data[i]
             confFile.write(fields[i] + " " + data[i] +"\n")
 
 if __name__=="__main__":
