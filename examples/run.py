@@ -9,7 +9,7 @@ import ctypes
 
 """
     read the content of a csv and return the
-    
+
 """
 def csvToList(csvFile):
     csvContent = csv.reader(csvFile,delimiter=',')
@@ -27,18 +27,22 @@ def main():
     trace = args.trace
     os.system("make clean all")
     if trace==False:
-        numCores = multiprocessing.cpu_count() -1 
+        numCores = multiprocessing.cpu_count() -1
         mraCsv  = csvToList(args.mra)
-         
+
         mrsgCsv = csvToList(args.mrsg)
         if len(mraCsv)!=len(mrsgCsv):
             print "ERROR: input files doesn't have same rows size!"
             sys.exit()
         # Skip the labels row (i.e., the first row )
-        row = multiprocessing.Value('i',0)
+        row = multiprocessing.Value('i',1)
        
+        #if the number of cores is bigger then number of tests, switch cores value (value of processes spwaned)
+        if len(mrsgCsv)<numCores:
+            numCores = len(mrsgCsv) -1
+            print "cores = " + str(numCores)
 	for core in range(numCores):
-           
+
             newProcess = multiprocessing.Process(target=runParallelTest,args=(mraCsv,mrsgCsv,args.parser,row))
  	    newProcess.start()
     else:
@@ -47,26 +51,31 @@ def main():
 def runParallelTest(mraCsv,mrsgCsv,parser,row):
     confFields= mrsgCsv[0][5:]
     confFields= confFields + mraCsv[0][5:]
-     
+
     while True:
+        currentValue = 0
 	with row.get_lock():
+            currentValue = row.value
             row.value+=1
-            if len(mrsgCsv) <= row.value:
-                sys.exit()
-        
-        platFile = "Exp_" + str(row.value) 
-        mraPlat = " ".join(mraCsv[row.value][:5])
-        mrsgPlat = " ".join(mrsgCsv[row.value][:5])
-        platFile = "Exp_" + str(row.value) 
-        
+            if len(mrsgCsv) < row.value:
+                return None
+
+        platFile = "Exp_" + str(currentValue)
+       # print "len ="+str(len(mrsgCsv))+"current = "+ str(currentValue)
+        mraPlat = " ".join(mraCsv[currentValue][:5])
+        mrsgPlat = " ".join(mrsgCsv[currentValue][:5])
+        platFile = "Exp_" + str(currentValue)
+        print "value = "+str(currentValue)+"\nPlats:"
+        print mraPlat
+        print mrsgPlat
         os.system("python create-bighybrid-plat.py "+platFile + ".xml " + mraPlat +" "+ mrsgPlat)
         os.system("python create-bighybrid-depoly.py "+ platFile+ ".xml ")
-       
-        createConfFile(platFile,confFields,mrsgCsv[row.value][5:]+mraCsv[row.value][5:])
-        params= platFile+ ".xml d-"+ platFile +".xml " + platFile + ".conf "+ parser 
+
+        createConfFile(platFile,confFields,mrsgCsv[currentValue][5:]+mraCsv[currentValue][5:])
+        params= platFile+ ".xml d-"+ platFile +".xml " + platFile + ".conf "+ parser
         print "running...."
-        os.system("./hello_bighybrid.bin -contexts/stack-size=262144 "+ params)
-	
+        os.system("./hello_bighybrid.bin "+ params)
+
 """
         Main script function.
         Creates all input files for bighybrid and run tests
@@ -85,13 +94,13 @@ def runTests(mraFile,mrsgFile,parser):
             # Take the first five fields of both csv to generate the bighybrid plat file
 	        mraPlat = " ".join(mra[:5])
 	        mrsgPlat = " ".join(mrsg[:5])
-                platFile = "Exp_" + str(row) 
+                platFile = "Exp_" + str(row)
                 os.system("python create-bighybrid-plat.py "+platFile + ".xml " + mraPlat +" "+ mrsgPlat)
 	        os.system("python create-bighybrid-depoly.py "+ platFile+ ".xml ")
                 createConfFile(platFile,confFields,mrsg[5:]+mra[5:])
-                params= platFile+ ".xml d-"+ platFile +".xml " + platFile + ".conf "+ parser 
-                os.system("./hello_bighybrid.bin -contexts/stack-size=262144 "+ params)
-                row = row +1        
+                params= platFile+ ".xml d-"+ platFile +".xml " + platFile + ".conf "+ parser
+                os.system("./hello_bighybrid.bin "+ params)
+                row = row +1
 	except Exception :
 	    print "gotcha"
             break
