@@ -25,7 +25,7 @@ def csvToList(csvFile):
 def main():
     args = readArgs()
     trace = args.trace
-
+    os.system("make clean all")
     if trace==False:
         numCores = multiprocessing.cpu_count() -1 
         mraCsv  = csvToList(args.mra)
@@ -58,15 +58,14 @@ def runParallelTest(mraCsv,mrsgCsv,parser,row):
         mraPlat = " ".join(mraCsv[row.value][:5])
         mrsgPlat = " ".join(mrsgCsv[row.value][:5])
         platFile = "Exp_" + str(row.value) 
-        print "Plat: "+ platFile +" MRA:" +mraPlat+" MRSG:" + mrsgPlat
+        
         os.system("python create-bighybrid-plat.py "+platFile + ".xml " + mraPlat +" "+ mrsgPlat)
         os.system("python create-bighybrid-depoly.py "+ platFile+ ".xml ")
        
         createConfFile(platFile,confFields,mrsgCsv[row.value][5:]+mraCsv[row.value][5:])
         params= platFile+ ".xml d-"+ platFile +".xml " + platFile + ".conf "+ parser 
-        print "Running main ..."
-        os.system("./hello_bighybrid.bin "+ params)
-        print "run ok"
+        print "running...."
+        os.system("./hello_bighybrid.bin -contexts/stack-size=262144 "+ params)
 	
 """
         Main script function.
@@ -91,7 +90,7 @@ def runTests(mraFile,mrsgFile,parser):
 	        os.system("python create-bighybrid-depoly.py "+ platFile+ ".xml ")
                 createConfFile(platFile,confFields,mrsg[5:]+mra[5:])
                 params= platFile+ ".xml d-"+ platFile +".xml " + platFile + ".conf "+ parser 
-                os.system("./hello_bighybrid.bin "+ params)
+                os.system("./hello_bighybrid.bin -contexts/stack-size=262144 "+ params)
                 row = row +1        
 	except Exception :
 	    print "gotcha"
@@ -112,7 +111,6 @@ def readArgs():
 def createConfFile(fileName,fields,data):
     with open(fileName+".conf",'w') as confFile:
         for i in range(len(fields)):
-            print fields[i] + ": "+ data[i]
             confFile.write(fields[i] + " " + data[i] +"\n")
 
 if __name__=="__main__":

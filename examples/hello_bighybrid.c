@@ -260,12 +260,15 @@ int main (int argc, char* argv[])
      }else if (argc == 5){
       int sg_argc = argc -4;
       MSG_init (&sg_argc, argv);
+      
       BIGHYBRID_main (argv[argc-4],argv[argc-3],argv[argc-2],argv[argc-1]);
 
      }else{
        int sg_argc = argc -4;
+//	printf("\n%s %s %s %s\n",argv[sg_argc],argv[sg_argc+1], argv[sg_argc+2],argv[sg_argc+3]);
        MSG_init (&sg_argc, argv);
-       BIGHYBRID_main (argv[sg_argc+1],argv[sg_argc+2], argv[sg_argc+3],argv[sg_argc+4]);
+      // BIGHYBRID_main (argv[sg_argc+1],argv[sg_argc+2], argv[sg_argc+3],argv[sg_argc+4]);
+       BIGHYBRID_main (argv[sg_argc],argv[sg_argc+1], argv[sg_argc+2],argv[sg_argc+3]);
      }
 
     return 0;
