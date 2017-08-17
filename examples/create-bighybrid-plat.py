@@ -32,7 +32,7 @@ for i in range(len(latency)):
 	latency[i] = float(latency[i])
 bandwidth = string.split(sys.argv[6], ':')
 for i in range(len(bandwidth)):
-	bandwidth[i] = float(bandwidth[i])
+	bandwidth[i] = bandwidth[i]
 
  
 # Header
@@ -130,7 +130,7 @@ for i in range(len(latency)):
 	latency[i] = float(latency[i])
 bandwidth = string.split(sys.argv[11], ':')
 for i in range(len(bandwidth)):
-	bandwidth[i] = float(bandwidth[i])
+	bandwidth[i] = str(bandwidth[i])
 
 
 output.write('  <AS id="AS2" routing="Full">\n')

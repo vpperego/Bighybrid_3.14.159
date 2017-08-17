@@ -25,6 +25,7 @@ def csvToList(csvFile):
 def main():
     args = readArgs()
     trace = args.trace
+    os.system("export LD_LIBRARY_PATH=$HOME/simgrid-3.14.159/lib")
     os.system("make clean all")
     if trace==False:
         numCores = multiprocessing.cpu_count() -1
