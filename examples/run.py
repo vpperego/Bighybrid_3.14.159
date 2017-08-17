@@ -6,6 +6,7 @@ import argparse
 import csv
 import sys
 import ctypes
+import subprocess
 
 """
     read the content of a csv and return the
@@ -41,7 +42,7 @@ def main():
         #if the number of cores is bigger then number of tests, switch cores value (value of processes spwaned)
         if len(mrsgCsv)<numCores:
             numCores = len(mrsgCsv) -1
-            print "cores = " + str(numCores)
+        #    print "cores = " + str(numCores)
 	for core in range(numCores):
 
             newProcess = multiprocessing.Process(target=runParallelTest,args=(mraCsv,mrsgCsv,args.parser,row))
@@ -66,17 +67,26 @@ def runParallelTest(mraCsv,mrsgCsv,parser,row):
         mraPlat = " ".join(mraCsv[currentValue][:5])
         mrsgPlat = " ".join(mrsgCsv[currentValue][:5])
         platFile = "Exp_" + str(currentValue)
-        print "value = "+str(currentValue)+"\nPlats:"
-        print mraPlat
-        print mrsgPlat
+       # print "value = "+str(currentValue)+"\nPlats:"
+       # print mraPlat
+       # print mrsgPlat
         os.system("python create-bighybrid-plat.py "+platFile + ".xml " + mraPlat +" "+ mrsgPlat)
         os.system("python create-bighybrid-depoly.py "+ platFile+ ".xml ")
 
         createConfFile(platFile,confFields,mrsgCsv[currentValue][5:]+mraCsv[currentValue][5:])
-        params= platFile+ ".xml d-"+ platFile +".xml " + platFile + ".conf "+ parser
+        params = []
+	params.append("./hello_bighybrid.bin")
+	params.append(platFile+ ".xml")
+	params.append("d-"+platFile +".xml" ) 
+	params.append(platFile + ".conf")
+	params.append(parser)
+	
         print "running...."
-        os.system("./hello_bighybrid.bin "+ params)
-
+	saida = open(platFile,'w')
+        output = subprocess.Popen(params, stdout=saida,stdin=saida,stderr=saida)#subprocess.PIPE)
+	saida.close()
+	#tmp = output.stdout.read()
+	#'./hello_bighybrid.bin '#print tmp[11]
 """
         Main script function.
         Creates all input files for bighybrid and run tests
@@ -100,7 +110,7 @@ def runTests(mraFile,mrsgFile,parser):
 	        os.system("python create-bighybrid-depoly.py "+ platFile+ ".xml ")
                 createConfFile(platFile,confFields,mrsg[5:]+mra[5:])
                 params= platFile+ ".xml d-"+ platFile +".xml " + platFile + ".conf "+ parser
-                os.system("./hello_bighybrid.bin "+ params)
+                output = os.popen("./hello_bighybrid.bin "+ params).read()
                 row = row +1
 	except Exception :
 	    print "gotcha"
