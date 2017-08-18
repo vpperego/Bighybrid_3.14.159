@@ -1,2 +1,0 @@
-[37m[0.000000] [xbt_cfg/INFO] Configuration change: Set 'tracing' to 'no'
-[37mError: Property <?xml is not valid. (in d-Experiment_1.0.xml)[00m

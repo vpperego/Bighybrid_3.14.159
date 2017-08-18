@@ -1,0 +1,1 @@
+[0.000000] /home/vpp/simgrid-3.14.159/src/simix/smx_context.cpp:180: [xbt/CRITICAL] Failed to allocate stack.

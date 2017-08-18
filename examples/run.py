@@ -28,6 +28,12 @@ def main():
     trace = args.trace
     os.system("export LD_LIBRARY_PATH=$HOME/simgrid-3.14.159/lib")
     os.system("make clean all")
+    
+    simgridParams = []
+    if args.simgrid!=None:
+        simgridParams = args.simgrid.readlines()
+        simgridParams = [x.strip() for x in simgridParams]
+
     if trace==False:
         numCores = multiprocessing.cpu_count() -1
         mraCsv  = csvToList(args.mra)
@@ -45,15 +51,16 @@ def main():
         #    print "cores = " + str(numCores)
 	for core in range(numCores):
 
-            newProcess = multiprocessing.Process(target=runParallelTest,args=(mraCsv,mrsgCsv,args.parser,row))
+            newProcess = multiprocessing.Process(target=runParallelTest,args=(mraCsv,mrsgCsv,args.parser,simgridParams,row))
  	    newProcess.start()
     else:
-        runTests(args.mra,args.mrsg,args.parser)
+        simgridParams.append('--cfg=tracing:yes')
+        runTests(args.mra,args.mrsg,args.parser,simgridParams)
 
-def runParallelTest(mraCsv,mrsgCsv,parser,row):
+def runParallelTest(mraCsv,mrsgCsv,parser,simgridParams,row):
     confFields= mrsgCsv[0][5:]
     confFields= confFields + mraCsv[0][5:]
-
+    #print simgridParams
     while True:
         currentValue = 0
 	with row.get_lock():
@@ -76,14 +83,15 @@ def runParallelTest(mraCsv,mrsgCsv,parser,row):
         createConfFile(platFile,confFields,mrsgCsv[currentValue][5:]+mraCsv[currentValue][5:])
         params = []
 	params.append("./hello_bighybrid.bin")
-	params.append(platFile+ ".xml")
+	params = params + simgridParams
+        params.append(platFile+ ".xml")
 	params.append("d-"+platFile +".xml" ) 
 	params.append(platFile + ".conf")
 	params.append(parser)
 	
-        print "running...."
-	saida = open(platFile,'w')
-        output = subprocess.Popen(params, stdout=saida,stdin=saida,stderr=saida)#subprocess.PIPE)
+        #print "running...."
+	saida = open(platFile+".txt",'w')
+        output = subprocess.Popen(params, stdin=saida,stderr=saida)#subprocess.PIPE)
 	saida.close()
 	#tmp = output.stdout.read()
 	#'./hello_bighybrid.bin '#print tmp[11]
@@ -123,7 +131,7 @@ def readArgs():
     parser.add_argument('-mra',type=file, help='input csv file with mra config fields')
     parser.add_argument('-mrsg',type=file, help='input csv file with mrsg config fields')
     parser.add_argument('-parser',help='volatile parser for MRA')
-
+    parser.add_argument('-simgrid',type=file, help='file with simgrid parameters (one per line)')
     return parser.parse_args()
 
 

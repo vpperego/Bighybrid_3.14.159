@@ -1,0 +1,36 @@
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_JOB CONFIGURATION:
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] slots_mra: 2 map, 2 reduce
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_chunk replicas: 3
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_chunk size: 64 MB
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_input chunks: 68
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_input size: 4352 MB
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_maps: 68
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_reduces: 130
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] grain factor: 2
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_map_output size: 3872 Bytes
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_workers: 65
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_grid power: 2.15648e+12 flops
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_average power: 3.31766e+10 flops/s
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_heartbeat interval: 3s
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_Failure Timeout Period: 3
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] Total Volatile Nodes: 13
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO]  
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] JOB_MRA BEGIN
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO]  
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO] JOB CONFIGURATION:
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO] slots: 2 map, 2 reduce
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO] chunk replicas: 3
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO] chunk size: 64 MB
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO] input chunks: 128
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO] input size: 8192 MB
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO] maps: 128
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO] MRSG_map_output size: 67109 Bytes
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO] reduces: 200
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO] workers: 100
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO] grid power: 5e+11 flops
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO] average power: 5e+09 flops/s
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO] mrsg_heartbeat interval: 3s
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO]  
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO] JOB BEGIN
+[MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO]  
+[0.000000] /home/vpp/simgrid-3.14.159/src/simix/smx_context.cpp:180: [xbt/CRITICAL] Failed to allocate stack.

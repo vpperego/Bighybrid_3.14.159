@@ -265,7 +265,7 @@ int main (int argc, char* argv[])
 
      }else{
        int sg_argc = argc -4;
-    	printf("\n%s %s %s %s\n",argv[sg_argc],argv[sg_argc+1], argv[sg_argc+2],argv[sg_argc+3]);
+    	printf("WITH SIMGRID %s\n%s %s %s %s\n",argv[1],argv[sg_argc],argv[sg_argc+1], argv[sg_argc+2],argv[sg_argc+3]);
        MSG_init (&sg_argc, argv);
       // BIGHYBRID_main (argv[sg_argc+1],argv[sg_argc+2], argv[sg_argc+3],argv[sg_argc+4]);
        BIGHYBRID_main (argv[sg_argc],argv[sg_argc+1], argv[sg_argc+2],argv[sg_argc+3]);
