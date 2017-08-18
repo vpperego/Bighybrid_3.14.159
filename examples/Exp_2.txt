@@ -9,8 +9,8 @@
 [MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] grain factor: 2
 [MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_map_output size: 3872 Bytes
 [MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_workers: 65
-[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_grid power: 2.15648e+12 flops
-[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_average power: 3.31766e+10 flops/s
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_grid power: 1.91566e+12 flops
+[MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_average power: 2.94717e+10 flops/s
 [MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_heartbeat interval: 3s
 [MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] MRA_Failure Timeout Period: 3
 [MRA_Host0:master_mra:(1) 0.000000] [msg_test/INFO] Total Volatile Nodes: 13
@@ -33,4 +33,942 @@
 [MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO]  
 [MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO] JOB BEGIN
 [MRSG_Host0:master_mrsg:(67) 0.000000] [msg_test/INFO]  
-[0.000000] /home/vpp/simgrid-3.14.159/src/simix/smx_context.cpp:180: [xbt/CRITICAL] Failed to allocate stack.
+[MRA_Host0:master_mra:(1) 0.001301] [msg_test/INFO] MRA_map 0 assigned to MRA_Host1 
+[MRSG_Host0:master_mrsg:(67) 0.001301] [msg_test/INFO] map 0 assigned to MRSG_Host1 
+[MRSG_Host0:master_mrsg:(67) 0.003903] [msg_test/INFO] map 1 assigned to MRSG_Host2 
+[MRA_Host0:master_mra:(1) 0.006505] [msg_test/INFO] MRA_map 2 assigned to MRA_Host4 
+[MRSG_Host0:master_mrsg:(67) 0.006505] [msg_test/INFO] map 2 assigned to MRSG_Host3 
+[MRA_Host0:master_mra:(1) 0.009107] [msg_test/INFO] MRA_map 3 assigned to MRA_Host5 
+[MRSG_Host0:master_mrsg:(67) 0.009107] [msg_test/INFO] map 3 assigned to MRSG_Host4 
+[MRA_Host0:master_mra:(1) 0.011709] [msg_test/INFO] MRA_map 5 assigned to MRA_Host6 
+[MRSG_Host0:master_mrsg:(67) 0.011709] [msg_test/INFO] map 4 assigned to MRSG_Host5 
+[MRA_Host0:master_mra:(1) 0.014311] [msg_test/INFO] MRA_map 6 assigned to MRA_Host7 
+[MRSG_Host0:master_mrsg:(67) 0.014311] [msg_test/INFO] map 5 assigned to MRSG_Host6 
+[MRSG_Host0:master_mrsg:(67) 0.016913] [msg_test/INFO] map 6 assigned to MRSG_Host7 
+[MRA_Host0:master_mra:(1) 0.018214] [msg_test/INFO] MRA_map 8 assigned to MRA_Host9 
+[MRSG_Host0:master_mrsg:(67) 0.019515] [msg_test/INFO] map 7 assigned to MRSG_Host8 
+[MRA_Host0:master_mra:(1) 0.020816] [msg_test/INFO] MRA_map 10 assigned to MRA_Host10 
+[MRSG_Host0:master_mrsg:(67) 0.022117] [msg_test/INFO] map 8 assigned to MRSG_Host9 
+[MRA_Host0:master_mra:(1) 0.024719] [msg_test/INFO] MRA_map 12 assigned to MRA_Host12 
+[MRSG_Host0:master_mrsg:(67) 0.024719] [msg_test/INFO] map 9 assigned to MRSG_Host10 
+[MRA_Host0:master_mra:(1) 0.027321] [msg_test/INFO] MRA_map 13 assigned to MRA_Host13 
+[MRSG_Host0:master_mrsg:(67) 0.027321] [msg_test/INFO] map 10 assigned to MRSG_Host11 
+[MRA_Host0:master_mra:(1) 0.029923] [msg_test/INFO] MRA_map 15 assigned to MRA_Host14 
+[MRSG_Host0:master_mrsg:(67) 0.029923] [msg_test/INFO] map 11 assigned to MRSG_Host12 
+[MRA_Host0:master_mra:(1) 0.032525] [msg_test/INFO] MRA_map 16 assigned to MRA_Host15 
+[MRSG_Host0:master_mrsg:(67) 0.032525] [msg_test/INFO] map 12 assigned to MRSG_Host13 
+[MRSG_Host0:master_mrsg:(67) 0.035127] [msg_test/INFO] map 13 assigned to MRSG_Host14 
+[MRA_Host0:master_mra:(1) 0.037729] [msg_test/INFO] MRA_map 11 assigned to MRA_Host18 
+[MRSG_Host0:master_mrsg:(67) 0.037729] [msg_test/INFO] map 14 assigned to MRSG_Host15 
+[MRA_Host0:master_mra:(1) 0.040331] [msg_test/INFO] MRA_map 18 assigned to MRA_Host19 
+[MRSG_Host0:master_mrsg:(67) 0.040331] [msg_test/INFO] map 15 assigned to MRSG_Host16 
+[MRA_Host0:master_mra:(1) 0.042933] [msg_test/INFO] MRA_map 19 assigned to MRA_Host20 
+[MRSG_Host0:master_mrsg:(67) 0.042933] [msg_test/INFO] map 16 assigned to MRSG_Host17 
+[MRA_Host0:master_mra:(1) 0.045535] [msg_test/INFO] MRA_map 20 assigned to MRA_Host21 
+[MRSG_Host0:master_mrsg:(67) 0.045535] [msg_test/INFO] map 17 assigned to MRSG_Host18 
+[MRA_Host0:master_mra:(1) 0.048137] [msg_test/INFO] MRA_map 9 assigned to MRA_Host22 
+[MRSG_Host0:master_mrsg:(67) 0.048137] [msg_test/INFO] map 18 assigned to MRSG_Host19 
+[MRA_Host0:master_mra:(1) 0.050739] [msg_test/INFO] MRA_map 17 assigned to MRA_Host23 
+[MRSG_Host0:master_mrsg:(67) 0.050739] [msg_test/INFO] map 19 assigned to MRSG_Host20 
+[MRA_Host0:master_mra:(1) 0.053341] [msg_test/INFO] MRA_map 22 assigned to MRA_Host24 
+[MRSG_Host0:master_mrsg:(67) 0.053341] [msg_test/INFO] map 20 assigned to MRSG_Host21 
+[MRA_Host0:master_mra:(1) 0.055943] [msg_test/INFO] MRA_map 25 assigned to MRA_Host25 
+[MRSG_Host0:master_mrsg:(67) 0.055943] [msg_test/INFO] map 21 assigned to MRSG_Host22 
+[MRSG_Host0:master_mrsg:(67) 0.058545] [msg_test/INFO] map 22 assigned to MRSG_Host23 
+[MRA_Host0:master_mra:(1) 0.059846] [msg_test/INFO] MRA_map 26 assigned to MRA_Host27 
+[MRSG_Host0:master_mrsg:(67) 0.061147] [msg_test/INFO] map 23 assigned to MRSG_Host24 
+[MRA_Host0:master_mra:(1) 0.063749] [msg_test/INFO] MRA_map 28 assigned to MRA_Host29 
+[MRSG_Host0:master_mrsg:(67) 0.063749] [msg_test/INFO] map 24 assigned to MRSG_Host25 
+[MRSG_Host0:master_mrsg:(67) 0.066351] [msg_test/INFO] map 25 assigned to MRSG_Host26 
+[MRA_Host0:master_mra:(1) 0.067652] [msg_test/INFO] MRA_map 29 assigned to MRA_Host31 
+[MRSG_Host0:master_mrsg:(67) 0.068953] [msg_test/INFO] map 26 assigned to MRSG_Host27 
+[MRA_Host0:master_mra:(1) 0.070254] [msg_test/INFO] MRA_map 31 assigned to MRA_Host32 
+[MRSG_Host0:master_mrsg:(67) 0.071555] [msg_test/INFO] map 27 assigned to MRSG_Host28 
+[MRA_Host0:master_mra:(1) 0.072856] [msg_test/INFO] MRA_map 7 assigned to MRA_Host33 
+[MRSG_Host0:master_mrsg:(67) 0.074157] [msg_test/INFO] map 28 assigned to MRSG_Host29 
+[MRSG_Host0:master_mrsg:(67) 0.076759] [msg_test/INFO] map 29 assigned to MRSG_Host30 
+[MRA_Host0:master_mra:(1) 0.078060] [msg_test/INFO] MRA_map 34 assigned to MRA_Host36 
+[MRSG_Host0:master_mrsg:(67) 0.079361] [msg_test/INFO] map 30 assigned to MRSG_Host31 
+[MRA_Host0:master_mra:(1) 0.080662] [msg_test/INFO] MRA_map 36 assigned to MRA_Host37 
+[MRSG_Host0:master_mrsg:(67) 0.081963] [msg_test/INFO] map 31 assigned to MRSG_Host32 
+[MRA_Host0:master_mra:(1) 0.083264] [msg_test/INFO] MRA_map 37 assigned to MRA_Host38 
+[MRSG_Host0:master_mrsg:(67) 0.084565] [msg_test/INFO] map 32 assigned to MRSG_Host33 
+[MRSG_Host0:master_mrsg:(67) 0.087167] [msg_test/INFO] map 33 assigned to MRSG_Host34 
+[MRA_Host0:master_mra:(1) 0.088468] [msg_test/INFO] MRA_map 38 assigned to MRA_Host41 
+[MRSG_Host0:master_mrsg:(67) 0.089769] [msg_test/INFO] map 34 assigned to MRSG_Host35 
+[MRA_Host0:master_mra:(1) 0.091070] [msg_test/INFO] MRA_map 40 assigned to MRA_Host42 
+[MRSG_Host0:master_mrsg:(67) 0.092371] [msg_test/INFO] map 35 assigned to MRSG_Host36 
+[MRA_Host0:master_mra:(1) 0.093672] [msg_test/INFO] MRA_map 23 assigned to MRA_Host43 
+[MRSG_Host0:master_mrsg:(67) 0.094973] [msg_test/INFO] map 36 assigned to MRSG_Host37 
+[MRA_Host0:master_mra:(1) 0.096274] [msg_test/INFO] MRA_map 24 assigned to MRA_Host44 
+[MRSG_Host0:master_mrsg:(67) 0.097575] [msg_test/INFO] map 37 assigned to MRSG_Host38 
+[MRA_Host0:master_mra:(1) 0.100177] [msg_test/INFO] MRA_map 44 assigned to MRA_Host46 
+[MRSG_Host0:master_mrsg:(67) 0.100177] [msg_test/INFO] map 38 assigned to MRSG_Host39 
+[MRA_Host0:master_mra:(1) 0.102779] [msg_test/INFO] MRA_map 4 assigned to MRA_Host47 
+[MRSG_Host0:master_mrsg:(67) 0.102779] [msg_test/INFO] map 39 assigned to MRSG_Host40 
+[MRA_Host0:master_mra:(1) 0.105381] [msg_test/INFO] MRA_map 46 assigned to MRA_Host48 
+[MRSG_Host0:master_mrsg:(67) 0.105381] [msg_test/INFO] map 40 assigned to MRSG_Host41 
+[MRA_Host0:master_mra:(1) 0.107983] [msg_test/INFO] MRA_map 14 assigned to MRA_Host49 
+[MRSG_Host0:master_mrsg:(67) 0.107983] [msg_test/INFO] map 41 assigned to MRSG_Host42 
+[MRA_Host0:master_mra:(1) 0.110585] [msg_test/INFO] MRA_map 50 assigned to MRA_Host50 
+[MRSG_Host0:master_mrsg:(67) 0.110585] [msg_test/INFO] map 42 assigned to MRSG_Host43 
+[MRA_Host0:master_mra:(1) 0.113187] [msg_test/INFO] MRA_map 27 assigned to MRA_Host51 
+[MRSG_Host0:master_mrsg:(67) 0.113187] [msg_test/INFO] map 43 assigned to MRSG_Host44 
+[MRA_Host0:master_mra:(1) 0.115789] [msg_test/INFO] MRA_map 43 assigned to MRA_Host52 
+[MRSG_Host0:master_mrsg:(67) 0.115789] [msg_test/INFO] map 44 assigned to MRSG_Host45 
+[MRA_Host0:master_mra:(1) 0.118391] [msg_test/INFO] MRA_map 53 assigned to MRA_Host53 
+[MRSG_Host0:master_mrsg:(67) 0.118391] [msg_test/INFO] map 45 assigned to MRSG_Host46 
+[MRA_Host0:master_mra:(1) 0.120993] [msg_test/INFO] MRA_map 1 assigned to MRA_Host54 
+[MRSG_Host0:master_mrsg:(67) 0.120993] [msg_test/INFO] map 46 assigned to MRSG_Host47 
+[MRA_Host0:master_mra:(1) 0.123595] [msg_test/INFO] MRA_map 55 assigned to MRA_Host55 
+[MRSG_Host0:master_mrsg:(67) 0.123595] [msg_test/INFO] map 47 assigned to MRSG_Host48 
+[MRA_Host0:master_mra:(1) 0.126197] [msg_test/INFO] MRA_map 57 assigned to MRA_Host56 
+[MRSG_Host0:master_mrsg:(67) 0.126197] [msg_test/INFO] map 48 assigned to MRSG_Host49 
+[MRSG_Host0:master_mrsg:(67) 0.128799] [msg_test/INFO] map 49 assigned to MRSG_Host50 
+[MRA_Host0:master_mra:(1) 0.130100] [msg_test/INFO] MRA_map 32 assigned to MRA_Host58 
+[MRSG_Host0:master_mrsg:(67) 0.131401] [msg_test/INFO] map 50 assigned to MRSG_Host51 
+[MRA_Host0:master_mra:(1) 0.132702] [msg_test/INFO] MRA_map 60 assigned to MRA_Host59 
+[MRSG_Host0:master_mrsg:(67) 0.134003] [msg_test/INFO] map 51 assigned to MRSG_Host52 
+[MRA_Host0:master_mra:(1) 0.135304] [msg_test/INFO] MRA_map 51 assigned to MRA_Host60 
+[MRSG_Host0:master_mrsg:(67) 0.136605] [msg_test/INFO] map 52 assigned to MRSG_Host53 
+[MRA_Host0:master_mra:(1) 0.137906] [msg_test/INFO] MRA_map 35 assigned to MRA_Host61 
+[MRSG_Host0:master_mrsg:(67) 0.139207] [msg_test/INFO] map 53 assigned to MRSG_Host54 
+[MRA_Host0:master_mra:(1) 0.141809] [msg_test/INFO] MRA_map 64 assigned to MRA_Host63 
+[MRSG_Host0:master_mrsg:(67) 0.141809] [msg_test/INFO] map 54 assigned to MRSG_Host55 
+[MRSG_Host0:master_mrsg:(67) 0.144411] [msg_test/INFO] map 55 assigned to MRSG_Host56 
+[MRA_Host0:master_mra:(1) 0.145712] [msg_test/INFO] MRA_map 47 assigned to MRA_Host65 
+[MRSG_Host0:master_mrsg:(67) 0.147013] [msg_test/INFO] map 56 assigned to MRSG_Host57 
+[MRSG_Host0:master_mrsg:(67) 0.149615] [msg_test/INFO] map 57 assigned to MRSG_Host58 
+[MRSG_Host0:master_mrsg:(67) 0.152217] [msg_test/INFO] map 58 assigned to MRSG_Host59 
+[MRSG_Host0:master_mrsg:(67) 0.154819] [msg_test/INFO] map 59 assigned to MRSG_Host60 
+[MRSG_Host0:master_mrsg:(67) 0.157421] [msg_test/INFO] map 60 assigned to MRSG_Host61 
+[MRSG_Host0:master_mrsg:(67) 0.160023] [msg_test/INFO] map 61 assigned to MRSG_Host62 
+[MRSG_Host0:master_mrsg:(67) 0.162625] [msg_test/INFO] map 62 assigned to MRSG_Host63 
+[MRSG_Host0:master_mrsg:(67) 0.165227] [msg_test/INFO] map 63 assigned to MRSG_Host64 
+[MRSG_Host0:master_mrsg:(67) 0.167829] [msg_test/INFO] map 64 assigned to MRSG_Host65 
+[MRSG_Host0:master_mrsg:(67) 0.170431] [msg_test/INFO] map 65 assigned to MRSG_Host66 
+[MRSG_Host0:master_mrsg:(67) 0.173033] [msg_test/INFO] map 66 assigned to MRSG_Host67 
+[MRSG_Host0:master_mrsg:(67) 0.175635] [msg_test/INFO] map 67 assigned to MRSG_Host68 
+[MRSG_Host0:master_mrsg:(67) 0.178237] [msg_test/INFO] map 68 assigned to MRSG_Host69 
+[MRSG_Host0:master_mrsg:(67) 0.180839] [msg_test/INFO] map 69 assigned to MRSG_Host70 
+[MRSG_Host0:master_mrsg:(67) 0.183441] [msg_test/INFO] map 70 assigned to MRSG_Host71 
+[MRSG_Host0:master_mrsg:(67) 0.186043] [msg_test/INFO] map 71 assigned to MRSG_Host72 
+[MRSG_Host0:master_mrsg:(67) 0.188645] [msg_test/INFO] map 72 assigned to MRSG_Host73 
+[MRSG_Host0:master_mrsg:(67) 0.191247] [msg_test/INFO] map 73 assigned to MRSG_Host74 
+[MRSG_Host0:master_mrsg:(67) 0.193849] [msg_test/INFO] map 74 assigned to MRSG_Host75 
+[MRSG_Host0:master_mrsg:(67) 0.196451] [msg_test/INFO] map 75 assigned to MRSG_Host76 
+[MRSG_Host0:master_mrsg:(67) 0.199053] [msg_test/INFO] map 76 assigned to MRSG_Host77 
+[MRSG_Host0:master_mrsg:(67) 0.201655] [msg_test/INFO] map 77 assigned to MRSG_Host78 
+[MRSG_Host0:master_mrsg:(67) 0.204257] [msg_test/INFO] map 78 assigned to MRSG_Host79 
+[MRSG_Host0:master_mrsg:(67) 0.206859] [msg_test/INFO] map 79 assigned to MRSG_Host80 
+[MRSG_Host0:master_mrsg:(67) 0.209461] [msg_test/INFO] map 80 assigned to MRSG_Host81 
+[MRSG_Host0:master_mrsg:(67) 0.212063] [msg_test/INFO] map 81 assigned to MRSG_Host82 
+[MRSG_Host0:master_mrsg:(67) 0.214665] [msg_test/INFO] map 82 assigned to MRSG_Host83 
+[MRSG_Host0:master_mrsg:(67) 0.217267] [msg_test/INFO] map 83 assigned to MRSG_Host84 
+[MRSG_Host0:master_mrsg:(67) 0.219869] [msg_test/INFO] map 84 assigned to MRSG_Host85 
+[MRSG_Host0:master_mrsg:(67) 0.222471] [msg_test/INFO] map 85 assigned to MRSG_Host86 
+[MRSG_Host0:master_mrsg:(67) 0.225073] [msg_test/INFO] map 86 assigned to MRSG_Host87 
+[MRSG_Host0:master_mrsg:(67) 0.227675] [msg_test/INFO] map 87 assigned to MRSG_Host88 
+[MRSG_Host0:master_mrsg:(67) 0.230277] [msg_test/INFO] map 88 assigned to MRSG_Host89 
+[MRSG_Host0:master_mrsg:(67) 0.232879] [msg_test/INFO] map 89 assigned to MRSG_Host90 
+[MRSG_Host0:master_mrsg:(67) 0.235481] [msg_test/INFO] map 90 assigned to MRSG_Host91 
+[MRSG_Host0:master_mrsg:(67) 0.238083] [msg_test/INFO] map 91 assigned to MRSG_Host92 
+[MRSG_Host0:master_mrsg:(67) 0.240685] [msg_test/INFO] map 92 assigned to MRSG_Host93 
+[MRSG_Host0:master_mrsg:(67) 0.243287] [msg_test/INFO] map 93 assigned to MRSG_Host94 
+[MRSG_Host0:master_mrsg:(67) 0.245889] [msg_test/INFO] map 94 assigned to MRSG_Host95 
+[MRSG_Host0:master_mrsg:(67) 0.248491] [msg_test/INFO] map 95 assigned to MRSG_Host96 
+[MRSG_Host0:master_mrsg:(67) 0.251093] [msg_test/INFO] map 96 assigned to MRSG_Host97 
+[MRSG_Host0:master_mrsg:(67) 0.253695] [msg_test/INFO] map 97 assigned to MRSG_Host98 
+[MRSG_Host0:master_mrsg:(67) 0.256297] [msg_test/INFO] map 98 assigned to MRSG_Host99 
+[MRSG_Host0:master_mrsg:(67) 0.258899] [msg_test/INFO] map 99 assigned to MRSG_Host100 
+[MRSG_Host0:master_mrsg:(67) 3.002602] [msg_test/INFO] map 100 assigned to MRSG_Host1 
+[MRA_Host0:master_mra:(1) 3.002602] [msg_test/INFO] MRA_map 39 assigned to MRA_Host1 
+[MRA_Host0:master_mra:(1) 3.003903] [msg_test/INFO] MRA_reduce 0 assigned to MRA_Host1 
+[MRSG_Host0:master_mrsg:(67) 3.005204] [msg_test/INFO] map 101 assigned to MRSG_Host2 
+[MRA_Host1:compute_mra:(648) 3.005204] [msg_test/INFO]  MRA_Reduce task 0 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 3.007806] [msg_test/INFO] map 102 assigned to MRSG_Host3 
+[MRSG_Host0:master_mrsg:(67) 3.010408] [msg_test/INFO] map 103 assigned to MRSG_Host4 
+[MRA_Host0:master_mra:(1) 3.010408] [msg_test/INFO] MRA_reduce 1 assigned to MRA_Host4 
+[MRA_Host6:worker_mra:(7) 3.011709] [msg_test/INFO]  Volat_node 5 OFF - Traces_time 7.33829, Hearbeat 3.01171, EOL 10.35  
+
+[MRA_Host4:compute_mra:(652) 3.011709] [msg_test/INFO]  MRA_Reduce task 1 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 3.013010] [msg_test/INFO] map 104 assigned to MRSG_Host5 
+[MRA_Host0:master_mra:(1) 3.013010] [msg_test/INFO] MRA_map 52 assigned to MRA_Host5 
+[MRA_Host0:master_mra:(1) 3.014311] [msg_test/INFO] MRA_reduce 2 assigned to MRA_Host5 
+[MRSG_Host0:master_mrsg:(67) 3.015612] [msg_test/INFO] map 105 assigned to MRSG_Host6 
+[MRA_Host5:compute_mra:(655) 3.015612] [msg_test/INFO]  MRA_Reduce task 2 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.016913] [msg_test/INFO] MRA_map 54 assigned to MRA_Host7 
+[MRA_Host0:master_mra:(1) 3.018214] [msg_test/INFO] MRA_reduce 3 assigned to MRA_Host7 
+[MRSG_Host0:master_mrsg:(67) 3.018214] [msg_test/INFO] map 106 assigned to MRSG_Host7 
+[MRA_Host7:compute_mra:(659) 3.019515] [msg_test/INFO]  MRA_Reduce task 3 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 3.020816] [msg_test/INFO] map 107 assigned to MRSG_Host8 
+[MRSG_Host0:master_mrsg:(67) 3.023418] [msg_test/INFO] map 108 assigned to MRSG_Host9 
+[MRA_Host0:master_mra:(1) 3.023418] [msg_test/INFO] MRA_map 48 assigned to MRA_Host9 
+[MRA_Host0:master_mra:(1) 3.024719] [msg_test/INFO] MRA_reduce 4 assigned to MRA_Host9 
+[MRSG_Host0:master_mrsg:(67) 3.026020] [msg_test/INFO] map 109 assigned to MRSG_Host10 
+[MRA_Host9:compute_mra:(663) 3.026020] [msg_test/INFO]  MRA_Reduce task 4 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.028622] [msg_test/INFO] MRA_map 41 assigned to MRA_Host10 
+[MRSG_Host0:master_mrsg:(67) 3.028622] [msg_test/INFO] map 110 assigned to MRSG_Host11 
+[MRA_Host0:master_mra:(1) 3.029923] [msg_test/INFO] MRA_reduce 5 assigned to MRA_Host10 
+[MRSG_Host0:master_mrsg:(67) 3.031224] [msg_test/INFO] map 111 assigned to MRSG_Host12 
+[MRA_Host10:compute_mra:(667) 3.031224] [msg_test/INFO]  MRA_Reduce task 5 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.033826] [msg_test/INFO] MRA_map 21 assigned to MRA_Host12 
+[MRSG_Host0:master_mrsg:(67) 3.033826] [msg_test/INFO] map 112 assigned to MRSG_Host13 
+[MRA_Host0:master_mra:(1) 3.035127] [msg_test/INFO] MRA_reduce 6 assigned to MRA_Host12 
+[MRSG_Host0:master_mrsg:(67) 3.036428] [msg_test/INFO] map 113 assigned to MRSG_Host14 
+[MRA_Host12:compute_mra:(671) 3.036428] [msg_test/INFO]  MRA_Reduce task 6 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.039030] [msg_test/INFO] MRA_reduce 7 assigned to MRA_Host13 
+[MRSG_Host0:master_mrsg:(67) 3.039030] [msg_test/INFO] map 114 assigned to MRSG_Host15 
+[MRA_Host13:compute_mra:(673) 3.040331] [msg_test/INFO]  MRA_Reduce task 7 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 3.041632] [msg_test/INFO] map 115 assigned to MRSG_Host16 
+[MRA_Host0:master_mra:(1) 3.041632] [msg_test/INFO] MRA_map 62 assigned to MRA_Host14 
+[MRA_Host0:master_mra:(1) 3.042933] [msg_test/INFO] MRA_reduce 8 assigned to MRA_Host14 
+[MRSG_Host0:master_mrsg:(67) 3.044234] [msg_test/INFO] map 116 assigned to MRSG_Host17 
+[MRA_Host14:compute_mra:(677) 3.044234] [msg_test/INFO]  MRA_Reduce task 8 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.046836] [msg_test/INFO] MRA_reduce 9 assigned to MRA_Host15 
+[MRSG_Host0:master_mrsg:(67) 3.046836] [msg_test/INFO] map 117 assigned to MRSG_Host18 
+[MRA_Host15:compute_mra:(679) 3.048137] [msg_test/INFO]  MRA_Reduce task 9 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 3.049438] [msg_test/INFO] map 118 assigned to MRSG_Host19 
+[MRSG_Host0:master_mrsg:(67) 3.052040] [msg_test/INFO] map 119 assigned to MRSG_Host20 
+[MRA_Host0:master_mra:(1) 3.053341] [msg_test/INFO] MRA_reduce 10 assigned to MRA_Host18 
+[MRSG_Host0:master_mrsg:(67) 3.054642] [msg_test/INFO] map 120 assigned to MRSG_Host21 
+[MRA_Host18:compute_mra:(683) 3.054642] [msg_test/INFO]  MRA_Reduce task 10 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.055943] [msg_test/INFO] MRA_map 30 assigned to MRA_Host19 
+[MRSG_Host0:master_mrsg:(67) 3.057244] [msg_test/INFO] map 121 assigned to MRSG_Host22 
+[MRA_Host0:master_mra:(1) 3.057244] [msg_test/INFO] MRA_reduce 11 assigned to MRA_Host19 
+[MRA_Host19:compute_mra:(687) 3.058545] [msg_test/INFO]  MRA_Reduce task 11 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 3.059846] [msg_test/INFO] map 122 assigned to MRSG_Host23 
+[MRA_Host0:master_mra:(1) 3.059846] [msg_test/INFO] MRA_reduce 12 assigned to MRA_Host20 
+[MRA_Host20:compute_mra:(688) 3.061147] [msg_test/INFO]  MRA_Reduce task 12 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 3.062448] [msg_test/INFO] map 123 assigned to MRSG_Host24 
+[MRA_Host0:master_mra:(1) 3.063749] [msg_test/INFO] MRA_reduce 13 assigned to MRA_Host21 
+[MRSG_Host0:master_mrsg:(67) 3.065050] [msg_test/INFO] map 124 assigned to MRSG_Host25 
+[MRA_Host21:compute_mra:(691) 3.065050] [msg_test/INFO]  MRA_Reduce task 13 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.066351] [msg_test/INFO] MRA_reduce 14 assigned to MRA_Host22 
+[MRSG_Host0:master_mrsg:(67) 3.067652] [msg_test/INFO] map 125 assigned to MRSG_Host26 
+[MRA_Host22:compute_mra:(693) 3.067652] [msg_test/INFO]  MRA_Reduce task 14 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.068953] [msg_test/INFO] MRA_map 33 assigned to MRA_Host23 
+[MRSG_Host0:master_mrsg:(67) 3.070254] [msg_test/INFO] map 126 assigned to MRSG_Host27 
+[MRA_Host0:master_mra:(1) 3.070254] [msg_test/INFO] MRA_reduce 15 assigned to MRA_Host23 
+[MRA_Host23:compute_mra:(696) 3.071555] [msg_test/INFO]  MRA_Reduce task 15 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 3.072856] [msg_test/INFO] map 127 assigned to MRSG_Host28 
+[MRA_Host0:master_mra:(1) 3.072856] [msg_test/INFO] MRA_map 56 assigned to MRA_Host24 
+[MRA_Host0:master_mra:(1) 3.074157] [msg_test/INFO] MRA_reduce 16 assigned to MRA_Host24 
+[MRA_Host24:compute_mra:(700) 3.075458] [msg_test/INFO]  MRA_Reduce task 16 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.076759] [msg_test/INFO] MRA_map 66 assigned to MRA_Host25 
+[MRA_Host0:master_mra:(1) 3.078060] [msg_test/INFO] MRA_reduce 17 assigned to MRA_Host25 
+[MRA_Host25:compute_mra:(702) 3.079361] [msg_test/INFO]  MRA_Reduce task 17 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.083264] [msg_test/INFO] MRA_reduce 18 assigned to MRA_Host27 
+[MRA_Host27:compute_mra:(703) 3.084565] [msg_test/INFO]  MRA_Reduce task 18 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.087167] [msg_test/INFO] MRA_map 42 assigned to MRA_Host29 
+[MRA_Host0:master_mra:(1) 3.088468] [msg_test/INFO] MRA_reduce 19 assigned to MRA_Host29 
+[MRA_Host29:compute_mra:(705) 3.089769] [msg_test/INFO]  MRA_Reduce task 19 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.092371] [msg_test/INFO] MRA_map 45 assigned to MRA_Host31 
+[MRA_Host0:master_mra:(1) 3.093672] [msg_test/INFO] MRA_reduce 20 assigned to MRA_Host31 
+[MRA_Host31:compute_mra:(707) 3.094973] [msg_test/INFO]  MRA_Reduce task 20 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.096274] [msg_test/INFO] MRA_map 63 assigned to MRA_Host32 
+[MRA_Host0:master_mra:(1) 3.097575] [msg_test/INFO] MRA_reduce 21 assigned to MRA_Host32 
+[MRA_Host32:compute_mra:(709) 3.098876] [msg_test/INFO]  MRA_Reduce task 21 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.101478] [msg_test/INFO] MRA_map 58 assigned to MRA_Host33 
+[MRA_Host0:master_mra:(1) 3.102779] [msg_test/INFO] MRA_reduce 22 assigned to MRA_Host33 
+[MRA_Host33:compute_mra:(711) 3.104080] [msg_test/INFO]  MRA_Reduce task 22 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.109284] [msg_test/INFO] MRA_reduce 23 assigned to MRA_Host36 
+[MRA_Host36:compute_mra:(712) 3.110585] [msg_test/INFO]  MRA_Reduce task 23 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.113187] [msg_test/INFO] MRA_reduce 24 assigned to MRA_Host37 
+[MRA_Host37:compute_mra:(713) 3.114488] [msg_test/INFO]  MRA_Reduce task 24 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.115789] [msg_test/INFO] MRA_map 49 assigned to MRA_Host38 
+[MRA_Host0:master_mra:(1) 3.117090] [msg_test/INFO] MRA_reduce 25 assigned to MRA_Host38 
+[MRA_Host38:compute_mra:(715) 3.118391] [msg_test/INFO]  MRA_Reduce task 25 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.122294] [msg_test/INFO] MRA_reduce 26 assigned to MRA_Host41 
+[MRA_Host41:compute_mra:(716) 3.123595] [msg_test/INFO]  MRA_Reduce task 26 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.126197] [msg_test/INFO] MRA_reduce 27 assigned to MRA_Host42 
+[MRA_Host42:compute_mra:(717) 3.127498] [msg_test/INFO]  MRA_Reduce task 27 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.128799] [msg_test/INFO] MRA_reduce 28 assigned to MRA_Host43 
+[MRA_Host43:compute_mra:(718) 3.130100] [msg_test/INFO]  MRA_Reduce task 28 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.132702] [msg_test/INFO] MRA_reduce 29 assigned to MRA_Host44 
+[MRA_Host44:compute_mra:(719) 3.134003] [msg_test/INFO]  MRA_Reduce task 29 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.137906] [msg_test/INFO] MRA_reduce 30 assigned to MRA_Host46 
+[MRA_Host46:compute_mra:(720) 3.139207] [msg_test/INFO]  MRA_Reduce task 30 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.140508] [msg_test/INFO] MRA_map 67 assigned to MRA_Host47 
+[MRA_Host0:master_mra:(1) 3.141809] [msg_test/INFO] MRA_reduce 31 assigned to MRA_Host47 
+[MRA_Host47:compute_mra:(722) 3.143110] [msg_test/INFO]  MRA_Reduce task 31 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.145712] [msg_test/INFO] MRA_reduce 32 assigned to MRA_Host48 
+[MRA_Host48:compute_mra:(723) 3.147013] [msg_test/INFO]  MRA_Reduce task 32 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.148314] [msg_test/INFO] MRA_map 65 assigned to MRA_Host49 
+[MRA_Host0:master_mra:(1) 3.149615] [msg_test/INFO] MRA_reduce 33 assigned to MRA_Host49 
+[MRA_Host49:compute_mra:(725) 3.150916] [msg_test/INFO]  MRA_Reduce task 33 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.152217] [msg_test/INFO] MRA_reduce 34 assigned to MRA_Host50 
+[MRA_Host50:compute_mra:(726) 3.153518] [msg_test/INFO]  MRA_Reduce task 34 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.154813] [msg_test/INFO] MRA_map 61 assigned to MRA_Host51 
+[MRA_Host0:master_mra:(1) 3.156114] [msg_test/INFO] MRA_reduce 35 assigned to MRA_Host51 
+[MRA_Host51:compute_mra:(728) 3.157415] [msg_test/INFO]  MRA_Reduce task 35 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.158716] [msg_test/INFO] MRA_reduce 36 assigned to MRA_Host52 
+[MRA_Host52:compute_mra:(729) 3.160017] [msg_test/INFO]  MRA_Reduce task 36 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.162619] [msg_test/INFO] MRA_reduce 37 assigned to MRA_Host53 
+[MRA_Host53:compute_mra:(730) 3.163920] [msg_test/INFO]  MRA_Reduce task 37 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.165221] [msg_test/INFO] MRA_reduce 38 assigned to MRA_Host54 
+[MRA_Host54:compute_mra:(731) 3.166522] [msg_test/INFO]  MRA_Reduce task 38 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.167823] [msg_test/INFO] MRA_reduce 39 assigned to MRA_Host55 
+[MRA_Host55:compute_mra:(732) 3.169124] [msg_test/INFO]  MRA_Reduce task 39 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.170425] [msg_test/INFO] MRA_reduce 40 assigned to MRA_Host56 
+[MRA_Host56:compute_mra:(733) 3.171726] [msg_test/INFO]  MRA_Reduce task 40 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.174328] [msg_test/INFO] MRA_map 59 assigned to MRA_Host58 
+[MRA_Host0:master_mra:(1) 3.175629] [msg_test/INFO] MRA_reduce 41 assigned to MRA_Host58 
+[MRA_Host58:compute_mra:(735) 3.176930] [msg_test/INFO]  MRA_Reduce task 41 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.178231] [msg_test/INFO] MRA_reduce 42 assigned to MRA_Host59 
+[MRA_Host59:compute_mra:(736) 3.179532] [msg_test/INFO]  MRA_Reduce task 42 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.180833] [msg_test/INFO] MRA_reduce 43 assigned to MRA_Host60 
+[MRA_Host60:compute_mra:(737) 3.182134] [msg_test/INFO]  MRA_Reduce task 43 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.183435] [msg_test/INFO] MRA_reduce 44 assigned to MRA_Host61 
+[MRA_Host61:compute_mra:(738) 3.184736] [msg_test/INFO]  MRA_Reduce task 44 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.187338] [msg_test/INFO] MRA_reduce 45 assigned to MRA_Host63 
+[MRA_Host63:compute_mra:(739) 3.188639] [msg_test/INFO]  MRA_Reduce task 45 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.192542] [msg_test/INFO] MRA_reduce 46 assigned to MRA_Host65 
+[MRA_Host65:compute_mra:(740) 3.193843] [msg_test/INFO]  MRA_Reduce task 46 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 3.197746] [msg_test/INFO]  
+[MRA_Host0:master_mra:(1) 3.197746] [msg_test/INFO] MRA_MAP PHASE DONE
+[MRA_Host0:master_mra:(1) 3.197746] [msg_test/INFO]  
+[MRA_Host0:master_mra:(1) 6.003903] [msg_test/INFO] MRA_reduce 47 assigned to MRA_Host1 
+[MRA_Host1:compute_mra:(741) 6.005204] [msg_test/INFO]  MRA_Reduce task 47 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.011709] [msg_test/INFO] MRA_reduce 48 assigned to MRA_Host4 
+[MRA_Host4:compute_mra:(742) 6.013010] [msg_test/INFO]  MRA_Reduce task 48 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.014311] [msg_test/INFO] MRA_reduce 49 assigned to MRA_Host5 
+[MRA_Host5:compute_mra:(743) 6.015612] [msg_test/INFO]  MRA_Reduce task 49 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.018214] [msg_test/INFO] MRA_reduce 50 assigned to MRA_Host7 
+[MRA_Host7:compute_mra:(744) 6.019515] [msg_test/INFO]  MRA_Reduce task 50 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.024719] [msg_test/INFO] MRA_reduce 51 assigned to MRA_Host9 
+[MRA_Host9:compute_mra:(745) 6.026020] [msg_test/INFO]  MRA_Reduce task 51 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.029923] [msg_test/INFO] MRA_reduce 52 assigned to MRA_Host10 
+[MRA_Host10:compute_mra:(746) 6.031224] [msg_test/INFO]  MRA_Reduce task 52 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.035127] [msg_test/INFO] MRA_reduce 53 assigned to MRA_Host12 
+[MRA_Host12:compute_mra:(747) 6.036428] [msg_test/INFO]  MRA_Reduce task 53 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.040331] [msg_test/INFO] MRA_reduce 54 assigned to MRA_Host13 
+[MRA_Host13:compute_mra:(748) 6.041632] [msg_test/INFO]  MRA_Reduce task 54 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.042933] [msg_test/INFO] MRA_reduce 55 assigned to MRA_Host14 
+[MRA_Host14:compute_mra:(749) 6.044234] [msg_test/INFO]  MRA_Reduce task 55 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.048137] [msg_test/INFO] MRA_reduce 56 assigned to MRA_Host15 
+[MRA_Host15:compute_mra:(750) 6.049438] [msg_test/INFO]  MRA_Reduce task 56 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.054642] [msg_test/INFO] MRA_reduce 57 assigned to MRA_Host18 
+[MRA_Host18:compute_mra:(751) 6.055943] [msg_test/INFO]  MRA_Reduce task 57 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.057244] [msg_test/INFO] MRA_reduce 58 assigned to MRA_Host19 
+[MRA_Host19:compute_mra:(752) 6.058545] [msg_test/INFO]  MRA_Reduce task 58 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.061147] [msg_test/INFO] MRA_reduce 59 assigned to MRA_Host20 
+[MRA_Host20:compute_mra:(753) 6.062448] [msg_test/INFO]  MRA_Reduce task 59 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.065050] [msg_test/INFO] MRA_reduce 60 assigned to MRA_Host21 
+[MRA_Host21:compute_mra:(754) 6.066351] [msg_test/INFO]  MRA_Reduce task 60 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.067652] [msg_test/INFO] MRA_reduce 61 assigned to MRA_Host22 
+[MRA_Host22:compute_mra:(755) 6.068953] [msg_test/INFO]  MRA_Reduce task 61 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.070254] [msg_test/INFO] MRA_reduce 62 assigned to MRA_Host23 
+[MRA_Host23:compute_mra:(756) 6.071555] [msg_test/INFO]  MRA_Reduce task 62 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.074157] [msg_test/INFO] MRA_reduce 63 assigned to MRA_Host24 
+[MRA_Host24:compute_mra:(757) 6.075458] [msg_test/INFO]  MRA_Reduce task 63 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.078060] [msg_test/INFO] MRA_reduce 64 assigned to MRA_Host25 
+[MRA_Host25:compute_mra:(758) 6.079361] [msg_test/INFO]  MRA_Reduce task 64 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.084565] [msg_test/INFO] MRA_reduce 65 assigned to MRA_Host27 
+[MRA_Host27:compute_mra:(759) 6.085866] [msg_test/INFO]  MRA_Reduce task 65 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.088468] [msg_test/INFO] MRA_reduce 66 assigned to MRA_Host29 
+[MRA_Host29:compute_mra:(760) 6.089769] [msg_test/INFO]  MRA_Reduce task 66 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.093672] [msg_test/INFO] MRA_reduce 67 assigned to MRA_Host31 
+[MRA_Host31:compute_mra:(761) 6.094973] [msg_test/INFO]  MRA_Reduce task 67 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.097575] [msg_test/INFO] MRA_reduce 68 assigned to MRA_Host32 
+[MRA_Host32:compute_mra:(762) 6.098876] [msg_test/INFO]  MRA_Reduce task 68 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.102779] [msg_test/INFO] MRA_reduce 69 assigned to MRA_Host33 
+[MRA_Host33:compute_mra:(763) 6.104080] [msg_test/INFO]  MRA_Reduce task 69 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.110585] [msg_test/INFO] MRA_reduce 70 assigned to MRA_Host36 
+[MRA_Host36:compute_mra:(764) 6.111886] [msg_test/INFO]  MRA_Reduce task 70 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.114488] [msg_test/INFO] MRA_reduce 71 assigned to MRA_Host37 
+[MRA_Host37:compute_mra:(765) 6.115789] [msg_test/INFO]  MRA_Reduce task 71 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.117090] [msg_test/INFO] MRA_reduce 72 assigned to MRA_Host38 
+[MRA_Host38:compute_mra:(766) 6.118391] [msg_test/INFO]  MRA_Reduce task 72 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.123595] [msg_test/INFO] MRA_reduce 73 assigned to MRA_Host41 
+[MRA_Host41:compute_mra:(767) 6.124896] [msg_test/INFO]  MRA_Reduce task 73 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.127498] [msg_test/INFO] MRA_reduce 74 assigned to MRA_Host42 
+[MRA_Host42:compute_mra:(768) 6.128799] [msg_test/INFO]  MRA_Reduce task 74 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.130100] [msg_test/INFO] MRA_reduce 75 assigned to MRA_Host43 
+[MRA_Host43:compute_mra:(769) 6.131395] [msg_test/INFO]  MRA_Reduce task 75 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.133997] [msg_test/INFO] MRA_reduce 76 assigned to MRA_Host44 
+[MRA_Host44:compute_mra:(770) 6.135298] [msg_test/INFO]  MRA_Reduce task 76 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.139201] [msg_test/INFO] MRA_reduce 77 assigned to MRA_Host46 
+[MRA_Host46:compute_mra:(771) 6.140502] [msg_test/INFO]  MRA_Reduce task 77 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.141803] [msg_test/INFO] MRA_reduce 78 assigned to MRA_Host47 
+[MRA_Host47:compute_mra:(772) 6.143104] [msg_test/INFO]  MRA_Reduce task 78 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.147007] [msg_test/INFO] MRA_reduce 79 assigned to MRA_Host48 
+[MRA_Host48:compute_mra:(773) 6.148308] [msg_test/INFO]  MRA_Reduce task 79 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.149609] [msg_test/INFO] MRA_reduce 80 assigned to MRA_Host49 
+[MRA_Host49:compute_mra:(774) 6.150910] [msg_test/INFO]  MRA_Reduce task 80 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.153512] [msg_test/INFO] MRA_reduce 81 assigned to MRA_Host50 
+[MRA_Host50:compute_mra:(775) 6.154813] [msg_test/INFO]  MRA_Reduce task 81 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.156114] [msg_test/INFO] MRA_reduce 82 assigned to MRA_Host51 
+[MRA_Host51:compute_mra:(776) 6.157415] [msg_test/INFO]  MRA_Reduce task 82 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.160017] [msg_test/INFO] MRA_reduce 83 assigned to MRA_Host52 
+[MRA_Host52:compute_mra:(777) 6.161318] [msg_test/INFO]  MRA_Reduce task 83 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.163920] [msg_test/INFO] MRA_reduce 84 assigned to MRA_Host53 
+[MRA_Host53:compute_mra:(778) 6.165221] [msg_test/INFO]  MRA_Reduce task 84 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.166522] [msg_test/INFO] MRA_reduce 85 assigned to MRA_Host54 
+[MRA_Host54:compute_mra:(779) 6.167823] [msg_test/INFO]  MRA_Reduce task 85 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.169124] [msg_test/INFO] MRA_reduce 86 assigned to MRA_Host55 
+[MRA_Host55:compute_mra:(780) 6.170425] [msg_test/INFO]  MRA_Reduce task 86 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.171726] [msg_test/INFO] MRA_reduce 87 assigned to MRA_Host56 
+[MRA_Host56:compute_mra:(781) 6.173027] [msg_test/INFO]  MRA_Reduce task 87 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.175629] [msg_test/INFO] MRA_reduce 88 assigned to MRA_Host58 
+[MRA_Host58:compute_mra:(782) 6.176930] [msg_test/INFO]  MRA_Reduce task 88 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.179532] [msg_test/INFO] MRA_reduce 89 assigned to MRA_Host59 
+[MRA_Host59:compute_mra:(783) 6.180833] [msg_test/INFO]  MRA_Reduce task 89 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.182134] [msg_test/INFO] MRA_reduce 90 assigned to MRA_Host60 
+[MRA_Host60:compute_mra:(784) 6.183435] [msg_test/INFO]  MRA_Reduce task 90 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.184736] [msg_test/INFO] MRA_reduce 91 assigned to MRA_Host61 
+[MRA_Host61:compute_mra:(785) 6.186037] [msg_test/INFO]  MRA_Reduce task 91 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.188639] [msg_test/INFO] MRA_reduce 92 assigned to MRA_Host63 
+[MRA_Host63:compute_mra:(786) 6.189940] [msg_test/INFO]  MRA_Reduce task 92 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 6.193843] [msg_test/INFO] MRA_reduce 93 assigned to MRA_Host65 
+[MRA_Host65:compute_mra:(787) 6.195144] [msg_test/INFO]  MRA_Reduce task 93 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.005204] [msg_test/INFO] reduce 0 assigned to MRSG_Host1 
+[MRSG_Host1:compute_mrsg:(788) 9.006505] [msg_test/INFO]  MRSG_Reduce task 0 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.007806] [msg_test/INFO] reduce 1 assigned to MRSG_Host2 
+[MRSG_Host2:compute_mrsg:(789) 9.009107] [msg_test/INFO]  MRSG_Reduce task 1 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.010408] [msg_test/INFO] reduce 2 assigned to MRSG_Host3 
+[MRSG_Host3:compute_mrsg:(790) 9.011709] [msg_test/INFO]  MRSG_Reduce task 2 sent 8589824 Bytes
+[MRA_Host0:master_mra:(1) 9.013010] [msg_test/INFO] MRA_reduce 94 assigned to MRA_Host4 
+[MRSG_Host0:master_mrsg:(67) 9.013010] [msg_test/INFO] reduce 3 assigned to MRSG_Host4 
+[MRA_Host4:compute_mra:(791) 9.014311] [msg_test/INFO]  MRA_Reduce task 94 sent 263228 Bytes
+[MRSG_Host4:compute_mrsg:(792) 9.014311] [msg_test/INFO]  MRSG_Reduce task 3 sent 8589824 Bytes
+[MRA_Host0:master_mra:(1) 9.015612] [msg_test/INFO] MRA_reduce 95 assigned to MRA_Host5 
+[MRSG_Host0:master_mrsg:(67) 9.015612] [msg_test/INFO] reduce 4 assigned to MRSG_Host5 
+[MRSG_Host5:compute_mrsg:(793) 9.016913] [msg_test/INFO]  MRSG_Reduce task 4 sent 8589824 Bytes
+[MRA_Host5:compute_mra:(794) 9.016913] [msg_test/INFO]  MRA_Reduce task 95 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.018214] [msg_test/INFO] reduce 5 assigned to MRSG_Host6 
+[MRA_Host0:master_mra:(1) 9.019515] [msg_test/INFO] MRA_reduce 96 assigned to MRA_Host7 
+[MRSG_Host6:compute_mrsg:(795) 9.019515] [msg_test/INFO]  MRSG_Reduce task 5 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.020816] [msg_test/INFO] reduce 6 assigned to MRSG_Host7 
+[MRA_Host7:compute_mra:(796) 9.020816] [msg_test/INFO]  MRA_Reduce task 96 sent 263228 Bytes
+[MRSG_Host7:compute_mrsg:(797) 9.022117] [msg_test/INFO]  MRSG_Reduce task 6 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.023418] [msg_test/INFO] reduce 7 assigned to MRSG_Host8 
+[MRA_Host0:master_mra:(1) 9.024719] [msg_test/INFO] MRA_Host6, Failure Detected 5 @ 9.02472 - 7 
+
+[MRSG_Host8:compute_mrsg:(798) 9.024719] [msg_test/INFO]  MRSG_Reduce task 7 sent 8589824 Bytes
+[MRA_Host0:master_mra:(1) 9.026020] [msg_test/INFO] MRA_reduce 97 assigned to MRA_Host9 
+[MRSG_Host0:master_mrsg:(67) 9.026020] [msg_test/INFO] reduce 8 assigned to MRSG_Host9 
+[MRA_Host9:compute_mra:(799) 9.027321] [msg_test/INFO]  MRA_Reduce task 97 sent 263228 Bytes
+[MRSG_Host9:compute_mrsg:(800) 9.027321] [msg_test/INFO]  MRSG_Reduce task 8 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.028622] [msg_test/INFO] reduce 9 assigned to MRSG_Host10 
+[MRSG_Host10:compute_mrsg:(801) 9.029923] [msg_test/INFO]  MRSG_Reduce task 9 sent 8589824 Bytes
+[MRA_Host0:master_mra:(1) 9.031224] [msg_test/INFO] MRA_reduce 98 assigned to MRA_Host10 
+[MRSG_Host0:master_mrsg:(67) 9.031224] [msg_test/INFO] reduce 10 assigned to MRSG_Host11 
+[MRSG_Host11:compute_mrsg:(802) 9.032525] [msg_test/INFO]  MRSG_Reduce task 10 sent 8589824 Bytes
+[MRA_Host10:compute_mra:(803) 9.032525] [msg_test/INFO]  MRA_Reduce task 98 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.033826] [msg_test/INFO] reduce 11 assigned to MRSG_Host12 
+[MRSG_Host12:compute_mrsg:(804) 9.035127] [msg_test/INFO]  MRSG_Reduce task 11 sent 8589824 Bytes
+[MRA_Host0:master_mra:(1) 9.036428] [msg_test/INFO] MRA_reduce 99 assigned to MRA_Host12 
+[MRSG_Host0:master_mrsg:(67) 9.036428] [msg_test/INFO] reduce 12 assigned to MRSG_Host13 
+[MRSG_Host13:compute_mrsg:(805) 9.037729] [msg_test/INFO]  MRSG_Reduce task 12 sent 8589824 Bytes
+[MRA_Host12:compute_mra:(806) 9.037729] [msg_test/INFO]  MRA_Reduce task 99 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.039030] [msg_test/INFO] reduce 13 assigned to MRSG_Host14 
+[MRSG_Host14:compute_mrsg:(807) 9.040331] [msg_test/INFO]  MRSG_Reduce task 13 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.041632] [msg_test/INFO] reduce 14 assigned to MRSG_Host15 
+[MRA_Host0:master_mra:(1) 9.041632] [msg_test/INFO] MRA_reduce 100 assigned to MRA_Host13 
+[MRA_Host13:compute_mra:(808) 9.042933] [msg_test/INFO]  MRA_Reduce task 100 sent 263228 Bytes
+[MRSG_Host15:compute_mrsg:(809) 9.042933] [msg_test/INFO]  MRSG_Reduce task 14 sent 8589824 Bytes
+[MRA_Host0:master_mra:(1) 9.044234] [msg_test/INFO] MRA_reduce 101 assigned to MRA_Host14 
+[MRSG_Host0:master_mrsg:(67) 9.044234] [msg_test/INFO] reduce 15 assigned to MRSG_Host16 
+[MRA_Host14:compute_mra:(810) 9.045535] [msg_test/INFO]  MRA_Reduce task 101 sent 263228 Bytes
+[MRSG_Host16:compute_mrsg:(811) 9.045535] [msg_test/INFO]  MRSG_Reduce task 15 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.046836] [msg_test/INFO] reduce 16 assigned to MRSG_Host17 
+[MRSG_Host17:compute_mrsg:(812) 9.048137] [msg_test/INFO]  MRSG_Reduce task 16 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.049438] [msg_test/INFO] reduce 17 assigned to MRSG_Host18 
+[MRA_Host0:master_mra:(1) 9.049438] [msg_test/INFO] MRA_reduce 102 assigned to MRA_Host15 
+[MRA_Host15:compute_mra:(813) 9.050739] [msg_test/INFO]  MRA_Reduce task 102 sent 263228 Bytes
+[MRSG_Host18:compute_mrsg:(814) 9.050739] [msg_test/INFO]  MRSG_Reduce task 17 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.052040] [msg_test/INFO] reduce 18 assigned to MRSG_Host19 
+[MRSG_Host19:compute_mrsg:(815) 9.053341] [msg_test/INFO]  MRSG_Reduce task 18 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.054642] [msg_test/INFO] reduce 19 assigned to MRSG_Host20 
+[MRA_Host0:master_mra:(1) 9.055943] [msg_test/INFO] MRA_reduce 103 assigned to MRA_Host18 
+[MRSG_Host20:compute_mrsg:(816) 9.055943] [msg_test/INFO]  MRSG_Reduce task 19 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.057244] [msg_test/INFO] reduce 20 assigned to MRSG_Host21 
+[MRA_Host18:compute_mra:(817) 9.057244] [msg_test/INFO]  MRA_Reduce task 103 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 9.058545] [msg_test/INFO] MRA_reduce 104 assigned to MRA_Host19 
+[MRSG_Host21:compute_mrsg:(818) 9.058545] [msg_test/INFO]  MRSG_Reduce task 20 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.059846] [msg_test/INFO] reduce 21 assigned to MRSG_Host22 
+[MRA_Host19:compute_mra:(819) 9.059846] [msg_test/INFO]  MRA_Reduce task 104 sent 263228 Bytes
+[MRSG_Host22:compute_mrsg:(820) 9.061147] [msg_test/INFO]  MRSG_Reduce task 21 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.062448] [msg_test/INFO] reduce 22 assigned to MRSG_Host23 
+[MRA_Host0:master_mra:(1) 9.062448] [msg_test/INFO] MRA_reduce 105 assigned to MRA_Host20 
+[MRSG_Host23:compute_mrsg:(821) 9.063749] [msg_test/INFO]  MRSG_Reduce task 22 sent 8589824 Bytes
+[MRA_Host20:compute_mra:(822) 9.063749] [msg_test/INFO]  MRA_Reduce task 105 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.065050] [msg_test/INFO] reduce 23 assigned to MRSG_Host24 
+[MRA_Host0:master_mra:(1) 9.066351] [msg_test/INFO] MRA_reduce 106 assigned to MRA_Host21 
+[MRSG_Host24:compute_mrsg:(823) 9.066351] [msg_test/INFO]  MRSG_Reduce task 23 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.067652] [msg_test/INFO] reduce 24 assigned to MRSG_Host25 
+[MRA_Host21:compute_mra:(824) 9.067652] [msg_test/INFO]  MRA_Reduce task 106 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 9.068953] [msg_test/INFO] MRA_reduce 107 assigned to MRA_Host22 
+[MRSG_Host25:compute_mrsg:(825) 9.068953] [msg_test/INFO]  MRSG_Reduce task 24 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.070254] [msg_test/INFO] reduce 25 assigned to MRSG_Host26 
+[MRA_Host22:compute_mra:(826) 9.070254] [msg_test/INFO]  MRA_Reduce task 107 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 9.071555] [msg_test/INFO] MRA_reduce 108 assigned to MRA_Host23 
+[MRSG_Host26:compute_mrsg:(827) 9.071555] [msg_test/INFO]  MRSG_Reduce task 25 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.072856] [msg_test/INFO] reduce 26 assigned to MRSG_Host27 
+[MRA_Host23:compute_mra:(828) 9.072856] [msg_test/INFO]  MRA_Reduce task 108 sent 263228 Bytes
+[MRSG_Host27:compute_mrsg:(829) 9.074157] [msg_test/INFO]  MRSG_Reduce task 26 sent 8589824 Bytes
+[MRA_Host0:master_mra:(1) 9.075458] [msg_test/INFO] MRA_reduce 109 assigned to MRA_Host24 
+[MRSG_Host0:master_mrsg:(67) 9.075458] [msg_test/INFO] reduce 27 assigned to MRSG_Host28 
+[MRA_Host24:compute_mra:(830) 9.076759] [msg_test/INFO]  MRA_Reduce task 109 sent 263228 Bytes
+[MRSG_Host28:compute_mrsg:(831) 9.076759] [msg_test/INFO]  MRSG_Reduce task 27 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.078060] [msg_test/INFO] reduce 28 assigned to MRSG_Host29 
+[MRA_Host0:master_mra:(1) 9.079361] [msg_test/INFO] MRA_reduce 110 assigned to MRA_Host25 
+[MRSG_Host29:compute_mrsg:(832) 9.079361] [msg_test/INFO]  MRSG_Reduce task 28 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.080662] [msg_test/INFO] reduce 29 assigned to MRSG_Host30 
+[MRA_Host25:compute_mra:(833) 9.080662] [msg_test/INFO]  MRA_Reduce task 110 sent 263228 Bytes
+[MRSG_Host30:compute_mrsg:(834) 9.081963] [msg_test/INFO]  MRSG_Reduce task 29 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.083264] [msg_test/INFO] reduce 30 assigned to MRSG_Host31 
+[MRSG_Host31:compute_mrsg:(835) 9.084565] [msg_test/INFO]  MRSG_Reduce task 30 sent 8589824 Bytes
+[MRA_Host0:master_mra:(1) 9.085866] [msg_test/INFO] MRA_reduce 111 assigned to MRA_Host27 
+[MRSG_Host0:master_mrsg:(67) 9.085866] [msg_test/INFO] reduce 31 assigned to MRSG_Host32 
+[MRA_Host27:compute_mra:(836) 9.087167] [msg_test/INFO]  MRA_Reduce task 111 sent 263228 Bytes
+[MRSG_Host32:compute_mrsg:(837) 9.087167] [msg_test/INFO]  MRSG_Reduce task 31 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.088468] [msg_test/INFO] reduce 32 assigned to MRSG_Host33 
+[MRA_Host0:master_mra:(1) 9.089769] [msg_test/INFO] MRA_reduce 112 assigned to MRA_Host29 
+[MRSG_Host33:compute_mrsg:(838) 9.089769] [msg_test/INFO]  MRSG_Reduce task 32 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.091070] [msg_test/INFO] reduce 33 assigned to MRSG_Host34 
+[MRA_Host29:compute_mra:(839) 9.091070] [msg_test/INFO]  MRA_Reduce task 112 sent 263228 Bytes
+[MRSG_Host34:compute_mrsg:(840) 9.092371] [msg_test/INFO]  MRSG_Reduce task 33 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.093672] [msg_test/INFO] reduce 34 assigned to MRSG_Host35 
+[MRA_Host0:master_mra:(1) 9.094973] [msg_test/INFO] MRA_reduce 113 assigned to MRA_Host31 
+[MRSG_Host35:compute_mrsg:(841) 9.094973] [msg_test/INFO]  MRSG_Reduce task 34 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.096274] [msg_test/INFO] reduce 35 assigned to MRSG_Host36 
+[MRA_Host31:compute_mra:(842) 9.096274] [msg_test/INFO]  MRA_Reduce task 113 sent 263228 Bytes
+[MRSG_Host36:compute_mrsg:(843) 9.097575] [msg_test/INFO]  MRSG_Reduce task 35 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.098876] [msg_test/INFO] reduce 36 assigned to MRSG_Host37 
+[MRA_Host0:master_mra:(1) 9.098876] [msg_test/INFO] MRA_reduce 114 assigned to MRA_Host32 
+[MRA_Host32:compute_mra:(844) 9.100177] [msg_test/INFO]  MRA_Reduce task 114 sent 263228 Bytes
+[MRSG_Host37:compute_mrsg:(845) 9.100177] [msg_test/INFO]  MRSG_Reduce task 36 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.101478] [msg_test/INFO] reduce 37 assigned to MRSG_Host38 
+[MRSG_Host38:compute_mrsg:(846) 9.102779] [msg_test/INFO]  MRSG_Reduce task 37 sent 8589824 Bytes
+[MRA_Host0:master_mra:(1) 9.104080] [msg_test/INFO] MRA_reduce 115 assigned to MRA_Host33 
+[MRSG_Host0:master_mrsg:(67) 9.104080] [msg_test/INFO] reduce 38 assigned to MRSG_Host39 
+[MRSG_Host39:compute_mrsg:(847) 9.105381] [msg_test/INFO]  MRSG_Reduce task 38 sent 8589824 Bytes
+[MRA_Host33:compute_mra:(848) 9.105381] [msg_test/INFO]  MRA_Reduce task 115 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.106682] [msg_test/INFO] reduce 39 assigned to MRSG_Host40 
+[MRSG_Host40:compute_mrsg:(849) 9.107983] [msg_test/INFO]  MRSG_Reduce task 39 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.109284] [msg_test/INFO] reduce 40 assigned to MRSG_Host41 
+[MRSG_Host41:compute_mrsg:(850) 9.110585] [msg_test/INFO]  MRSG_Reduce task 40 sent 8589824 Bytes
+[MRA_Host0:master_mra:(1) 9.111886] [msg_test/INFO] MRA_reduce 116 assigned to MRA_Host36 
+[MRSG_Host0:master_mrsg:(67) 9.111886] [msg_test/INFO] reduce 41 assigned to MRSG_Host42 
+[MRSG_Host42:compute_mrsg:(851) 9.113187] [msg_test/INFO]  MRSG_Reduce task 41 sent 8589824 Bytes
+[MRA_Host36:compute_mra:(852) 9.113187] [msg_test/INFO]  MRA_Reduce task 116 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.114488] [msg_test/INFO] reduce 42 assigned to MRSG_Host43 
+[MRA_Host0:master_mra:(1) 9.115789] [msg_test/INFO] MRA_reduce 117 assigned to MRA_Host37 
+[MRSG_Host43:compute_mrsg:(853) 9.115789] [msg_test/INFO]  MRSG_Reduce task 42 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.117090] [msg_test/INFO] reduce 43 assigned to MRSG_Host44 
+[MRA_Host37:compute_mra:(854) 9.117090] [msg_test/INFO]  MRA_Reduce task 117 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 9.118391] [msg_test/INFO] MRA_reduce 118 assigned to MRA_Host38 
+[MRSG_Host44:compute_mrsg:(855) 9.118391] [msg_test/INFO]  MRSG_Reduce task 43 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.119692] [msg_test/INFO] reduce 44 assigned to MRSG_Host45 
+[MRA_Host38:compute_mra:(856) 9.119692] [msg_test/INFO]  MRA_Reduce task 118 sent 263228 Bytes
+[MRSG_Host45:compute_mrsg:(857) 9.120993] [msg_test/INFO]  MRSG_Reduce task 44 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.122294] [msg_test/INFO] reduce 45 assigned to MRSG_Host46 
+[MRSG_Host46:compute_mrsg:(858) 9.123595] [msg_test/INFO]  MRSG_Reduce task 45 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.124896] [msg_test/INFO] reduce 46 assigned to MRSG_Host47 
+[MRA_Host0:master_mra:(1) 9.124896] [msg_test/INFO] MRA_reduce 119 assigned to MRA_Host41 
+[MRSG_Host47:compute_mrsg:(859) 9.126197] [msg_test/INFO]  MRSG_Reduce task 46 sent 8589824 Bytes
+[MRA_Host41:compute_mra:(860) 9.126197] [msg_test/INFO]  MRA_Reduce task 119 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.127498] [msg_test/INFO] reduce 47 assigned to MRSG_Host48 
+[MRA_Host0:master_mra:(1) 9.128799] [msg_test/INFO] MRA_reduce 120 assigned to MRA_Host42 
+[MRSG_Host48:compute_mrsg:(861) 9.128799] [msg_test/INFO]  MRSG_Reduce task 47 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.130100] [msg_test/INFO] reduce 48 assigned to MRSG_Host49 
+[MRA_Host42:compute_mra:(862) 9.130100] [msg_test/INFO]  MRA_Reduce task 120 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 9.131395] [msg_test/INFO] MRA_reduce 121 assigned to MRA_Host43 
+[MRSG_Host49:compute_mrsg:(863) 9.131395] [msg_test/INFO]  MRSG_Reduce task 48 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.132696] [msg_test/INFO] reduce 49 assigned to MRSG_Host50 
+[MRA_Host43:compute_mra:(864) 9.132696] [msg_test/INFO]  MRA_Reduce task 121 sent 263228 Bytes
+[MRSG_Host50:compute_mrsg:(865) 9.133997] [msg_test/INFO]  MRSG_Reduce task 49 sent 8589824 Bytes
+[MRA_Host0:master_mra:(1) 9.135298] [msg_test/INFO] MRA_reduce 122 assigned to MRA_Host44 
+[MRSG_Host0:master_mrsg:(67) 9.135298] [msg_test/INFO] reduce 50 assigned to MRSG_Host51 
+[MRSG_Host51:compute_mrsg:(866) 9.136599] [msg_test/INFO]  MRSG_Reduce task 50 sent 8589824 Bytes
+[MRA_Host44:compute_mra:(867) 9.136599] [msg_test/INFO]  MRA_Reduce task 122 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.137900] [msg_test/INFO] reduce 51 assigned to MRSG_Host52 
+[MRSG_Host52:compute_mrsg:(868) 9.139201] [msg_test/INFO]  MRSG_Reduce task 51 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.140502] [msg_test/INFO] reduce 52 assigned to MRSG_Host53 
+[MRA_Host0:master_mra:(1) 9.140502] [msg_test/INFO] MRA_reduce 123 assigned to MRA_Host46 
+[MRSG_Host53:compute_mrsg:(869) 9.141803] [msg_test/INFO]  MRSG_Reduce task 52 sent 8589824 Bytes
+[MRA_Host46:compute_mra:(870) 9.141803] [msg_test/INFO]  MRA_Reduce task 123 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 9.143104] [msg_test/INFO] MRA_reduce 124 assigned to MRA_Host47 
+[MRSG_Host0:master_mrsg:(67) 9.143104] [msg_test/INFO] reduce 53 assigned to MRSG_Host54 
+[MRSG_Host54:compute_mrsg:(871) 9.144405] [msg_test/INFO]  MRSG_Reduce task 53 sent 8589824 Bytes
+[MRA_Host47:compute_mra:(872) 9.144405] [msg_test/INFO]  MRA_Reduce task 124 sent 263228 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.145706] [msg_test/INFO] reduce 54 assigned to MRSG_Host55 
+[MRSG_Host55:compute_mrsg:(873) 9.147007] [msg_test/INFO]  MRSG_Reduce task 54 sent 8589824 Bytes
+[MRA_Host0:master_mra:(1) 9.148308] [msg_test/INFO] MRA_reduce 125 assigned to MRA_Host48 
+[MRSG_Host0:master_mrsg:(67) 9.148308] [msg_test/INFO] reduce 55 assigned to MRSG_Host56 
+[MRSG_Host56:compute_mrsg:(874) 9.149609] [msg_test/INFO]  MRSG_Reduce task 55 sent 8589824 Bytes
+[MRA_Host48:compute_mra:(875) 9.149609] [msg_test/INFO]  MRA_Reduce task 125 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 9.150910] [msg_test/INFO] MRA_reduce 126 assigned to MRA_Host49 
+[MRSG_Host0:master_mrsg:(67) 9.150910] [msg_test/INFO] reduce 56 assigned to MRSG_Host57 
+[MRA_Host49:compute_mra:(876) 9.152211] [msg_test/INFO]  MRA_Reduce task 126 sent 263228 Bytes
+[MRSG_Host57:compute_mrsg:(877) 9.152211] [msg_test/INFO]  MRSG_Reduce task 56 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.153512] [msg_test/INFO] reduce 57 assigned to MRSG_Host58 
+[MRA_Host0:master_mra:(1) 9.154813] [msg_test/INFO] MRA_reduce 127 assigned to MRA_Host50 
+[MRSG_Host58:compute_mrsg:(878) 9.154813] [msg_test/INFO]  MRSG_Reduce task 57 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.156114] [msg_test/INFO] reduce 58 assigned to MRSG_Host59 
+[MRA_Host50:compute_mra:(879) 9.156114] [msg_test/INFO]  MRA_Reduce task 127 sent 263228 Bytes
+[MRA_Host0:master_mra:(1) 9.157415] [msg_test/INFO] MRA_reduce 128 assigned to MRA_Host51 
+[MRSG_Host59:compute_mrsg:(880) 9.157415] [msg_test/INFO]  MRSG_Reduce task 58 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.158716] [msg_test/INFO] reduce 59 assigned to MRSG_Host60 
+[MRA_Host51:compute_mra:(881) 9.158716] [msg_test/INFO]  MRA_Reduce task 128 sent 263228 Bytes
+[MRSG_Host60:compute_mrsg:(882) 9.160017] [msg_test/INFO]  MRSG_Reduce task 59 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.161318] [msg_test/INFO] reduce 60 assigned to MRSG_Host61 
+[MRA_Host0:master_mra:(1) 9.161318] [msg_test/INFO] MRA_reduce 129 assigned to MRA_Host52 
+[MRA_Host52:compute_mra:(883) 9.162619] [msg_test/INFO]  MRA_Reduce task 129 sent 263228 Bytes
+[MRSG_Host61:compute_mrsg:(884) 9.162619] [msg_test/INFO]  MRSG_Reduce task 60 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.163920] [msg_test/INFO] reduce 61 assigned to MRSG_Host62 
+[MRSG_Host62:compute_mrsg:(885) 9.165221] [msg_test/INFO]  MRSG_Reduce task 61 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.166522] [msg_test/INFO] reduce 62 assigned to MRSG_Host63 
+[MRSG_Host63:compute_mrsg:(886) 9.167823] [msg_test/INFO]  MRSG_Reduce task 62 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.169124] [msg_test/INFO] reduce 63 assigned to MRSG_Host64 
+[MRSG_Host64:compute_mrsg:(887) 9.170425] [msg_test/INFO]  MRSG_Reduce task 63 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.171726] [msg_test/INFO] reduce 64 assigned to MRSG_Host65 
+[MRSG_Host65:compute_mrsg:(888) 9.173027] [msg_test/INFO]  MRSG_Reduce task 64 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.174328] [msg_test/INFO] reduce 65 assigned to MRSG_Host66 
+[MRSG_Host66:compute_mrsg:(889) 9.175629] [msg_test/INFO]  MRSG_Reduce task 65 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.176930] [msg_test/INFO] reduce 66 assigned to MRSG_Host67 
+[MRSG_Host67:compute_mrsg:(890) 9.178231] [msg_test/INFO]  MRSG_Reduce task 66 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.179532] [msg_test/INFO] reduce 67 assigned to MRSG_Host68 
+[MRSG_Host68:compute_mrsg:(891) 9.180833] [msg_test/INFO]  MRSG_Reduce task 67 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.182134] [msg_test/INFO] reduce 68 assigned to MRSG_Host69 
+[MRSG_Host69:compute_mrsg:(892) 9.183435] [msg_test/INFO]  MRSG_Reduce task 68 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.184736] [msg_test/INFO] reduce 69 assigned to MRSG_Host70 
+[MRSG_Host70:compute_mrsg:(893) 9.186037] [msg_test/INFO]  MRSG_Reduce task 69 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.187338] [msg_test/INFO] reduce 70 assigned to MRSG_Host71 
+[MRSG_Host71:compute_mrsg:(894) 9.188639] [msg_test/INFO]  MRSG_Reduce task 70 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.189940] [msg_test/INFO] reduce 71 assigned to MRSG_Host72 
+[MRSG_Host72:compute_mrsg:(895) 9.191241] [msg_test/INFO]  MRSG_Reduce task 71 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.192542] [msg_test/INFO] reduce 72 assigned to MRSG_Host73 
+[MRSG_Host73:compute_mrsg:(896) 9.193843] [msg_test/INFO]  MRSG_Reduce task 72 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.195144] [msg_test/INFO] reduce 73 assigned to MRSG_Host74 
+[MRSG_Host74:compute_mrsg:(897) 9.196445] [msg_test/INFO]  MRSG_Reduce task 73 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.197746] [msg_test/INFO] reduce 74 assigned to MRSG_Host75 
+[MRSG_Host75:compute_mrsg:(898) 9.199047] [msg_test/INFO]  MRSG_Reduce task 74 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.200348] [msg_test/INFO] reduce 75 assigned to MRSG_Host76 
+[MRSG_Host76:compute_mrsg:(899) 9.201649] [msg_test/INFO]  MRSG_Reduce task 75 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.202950] [msg_test/INFO] reduce 76 assigned to MRSG_Host77 
+[MRSG_Host77:compute_mrsg:(900) 9.204251] [msg_test/INFO]  MRSG_Reduce task 76 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.205552] [msg_test/INFO] reduce 77 assigned to MRSG_Host78 
+[MRSG_Host78:compute_mrsg:(901) 9.206853] [msg_test/INFO]  MRSG_Reduce task 77 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.208154] [msg_test/INFO] reduce 78 assigned to MRSG_Host79 
+[MRSG_Host79:compute_mrsg:(902) 9.209455] [msg_test/INFO]  MRSG_Reduce task 78 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.210756] [msg_test/INFO] reduce 79 assigned to MRSG_Host80 
+[MRSG_Host80:compute_mrsg:(903) 9.212057] [msg_test/INFO]  MRSG_Reduce task 79 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.213358] [msg_test/INFO] reduce 80 assigned to MRSG_Host81 
+[MRSG_Host81:compute_mrsg:(904) 9.214659] [msg_test/INFO]  MRSG_Reduce task 80 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.215960] [msg_test/INFO] reduce 81 assigned to MRSG_Host82 
+[MRSG_Host82:compute_mrsg:(905) 9.217261] [msg_test/INFO]  MRSG_Reduce task 81 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.218562] [msg_test/INFO] reduce 82 assigned to MRSG_Host83 
+[MRSG_Host83:compute_mrsg:(906) 9.219863] [msg_test/INFO]  MRSG_Reduce task 82 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.221164] [msg_test/INFO] reduce 83 assigned to MRSG_Host84 
+[MRSG_Host84:compute_mrsg:(907) 9.222465] [msg_test/INFO]  MRSG_Reduce task 83 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.223766] [msg_test/INFO] reduce 84 assigned to MRSG_Host85 
+[MRSG_Host85:compute_mrsg:(908) 9.225067] [msg_test/INFO]  MRSG_Reduce task 84 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.226368] [msg_test/INFO] reduce 85 assigned to MRSG_Host86 
+[MRSG_Host86:compute_mrsg:(909) 9.227669] [msg_test/INFO]  MRSG_Reduce task 85 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.228970] [msg_test/INFO] reduce 86 assigned to MRSG_Host87 
+[MRSG_Host87:compute_mrsg:(910) 9.230271] [msg_test/INFO]  MRSG_Reduce task 86 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.231572] [msg_test/INFO] reduce 87 assigned to MRSG_Host88 
+[MRSG_Host88:compute_mrsg:(911) 9.232873] [msg_test/INFO]  MRSG_Reduce task 87 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.234174] [msg_test/INFO] reduce 88 assigned to MRSG_Host89 
+[MRSG_Host89:compute_mrsg:(912) 9.235475] [msg_test/INFO]  MRSG_Reduce task 88 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.236776] [msg_test/INFO] reduce 89 assigned to MRSG_Host90 
+[MRSG_Host90:compute_mrsg:(913) 9.238077] [msg_test/INFO]  MRSG_Reduce task 89 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.239378] [msg_test/INFO] reduce 90 assigned to MRSG_Host91 
+[MRSG_Host91:compute_mrsg:(914) 9.240679] [msg_test/INFO]  MRSG_Reduce task 90 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.241980] [msg_test/INFO] reduce 91 assigned to MRSG_Host92 
+[MRSG_Host92:compute_mrsg:(915) 9.243281] [msg_test/INFO]  MRSG_Reduce task 91 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.244582] [msg_test/INFO] reduce 92 assigned to MRSG_Host93 
+[MRSG_Host93:compute_mrsg:(916) 9.245883] [msg_test/INFO]  MRSG_Reduce task 92 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.247184] [msg_test/INFO] reduce 93 assigned to MRSG_Host94 
+[MRSG_Host94:compute_mrsg:(917) 9.248485] [msg_test/INFO]  MRSG_Reduce task 93 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.249786] [msg_test/INFO] reduce 94 assigned to MRSG_Host95 
+[MRSG_Host95:compute_mrsg:(918) 9.251087] [msg_test/INFO]  MRSG_Reduce task 94 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.252388] [msg_test/INFO] reduce 95 assigned to MRSG_Host96 
+[MRSG_Host96:compute_mrsg:(919) 9.253689] [msg_test/INFO]  MRSG_Reduce task 95 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.254990] [msg_test/INFO] reduce 96 assigned to MRSG_Host97 
+[MRSG_Host97:compute_mrsg:(920) 9.256291] [msg_test/INFO]  MRSG_Reduce task 96 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.257592] [msg_test/INFO] reduce 97 assigned to MRSG_Host98 
+[MRSG_Host98:compute_mrsg:(921) 9.258893] [msg_test/INFO]  MRSG_Reduce task 97 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.260194] [msg_test/INFO] reduce 98 assigned to MRSG_Host99 
+[MRSG_Host99:compute_mrsg:(922) 9.261495] [msg_test/INFO]  MRSG_Reduce task 98 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 9.262796] [msg_test/INFO] reduce 99 assigned to MRSG_Host100 
+[MRSG_Host100:compute_mrsg:(923) 9.264097] [msg_test/INFO]  MRSG_Reduce task 99 sent 8589824 Bytes
+[MRA_Host6:worker_mra:(7) 10.350000] [msg_test/INFO]  Volat_node 5 OFF - Traces_time 3.55618e-16, Hearbeat 3.01171, EOL 10.35  
+
+[MRA_Host6:worker_mra:(7) 10.350010] [msg_test/INFO]  Volat_node 5 ON - Traces_time 3, Hearbeat 10.35 
+
+[MRA_Host5:worker_mra:(6) 12.015612] [msg_test/INFO]  Volat_node 4 OFF - Traces_time 29.7024, Hearbeat 12.0156, EOL 41.718  
+
+[MRA_Host13:worker_mra:(14) 12.041632] [msg_test/INFO]  Volat_node 12 OFF - Traces_time 20.1144, Hearbeat 12.0416, EOL 32.156  
+
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO]  
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] MRA_REDUCE PHASE DONE
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO]  
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] MRA_JOB CONFIGURATION:
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] slots_mra: 2 map, 2 reduce
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] MRA_chunk replicas: 3
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] MRA_chunk size: 64 MB
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] MRA_input chunks: 68
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] MRA_input size: 4352 MB
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] MRA_maps: 68
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] MRA_reduces: 130
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] grain factor: 2
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] MRA_map_output size: 3872 Bytes
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] MRA_workers: 65
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] MRA_grid power: 1.91566e+12 flops
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] MRA_average power: 2.94717e+10 flops/s
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] MRA_heartbeat interval: 3s
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] MRA_Failure Timeout Period: 3
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] Total Volatile Nodes: 13
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO]  
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] MRA_JOB STATISTICS:
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] local maps: 68
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] non-local maps: 0
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] speculative maps (local): 0
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] speculative maps (remote): 0
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] recovery maps: 0
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] total non-local maps: 0
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] total speculative maps: 0
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] normal reduces: 130
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] speculative reduces: 0
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] recovery reduces: 0
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] Map Time: 3.197746
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] Reduce Time: 9.213465
+[MRA_Host0:master_mra:(1) 12.411211] [msg_test/INFO] JOB END
+[MRSG_Host0:master_mrsg:(67) 13.821207] [msg_test/INFO]  
+[MRSG_Host0:master_mrsg:(67) 13.821207] [msg_test/INFO] MRSG_MAP PHASE DONE
+[MRSG_Host0:master_mrsg:(67) 13.821207] [msg_test/INFO]  
+[MRSG_Host0:master_mrsg:(67) 13.993722] [msg_test/INFO] reduce 100 assigned to MRSG_Host1 
+[MRSG_Host1:compute_mrsg:(924) 13.995023] [msg_test/INFO]  MRSG_Reduce task 100 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 13.996324] [msg_test/INFO] reduce 101 assigned to MRSG_Host2 
+[MRSG_Host2:compute_mrsg:(925) 13.997625] [msg_test/INFO]  MRSG_Reduce task 101 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 13.998926] [msg_test/INFO] reduce 102 assigned to MRSG_Host3 
+[MRSG_Host3:compute_mrsg:(926) 14.000227] [msg_test/INFO]  MRSG_Reduce task 102 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.001528] [msg_test/INFO] reduce 103 assigned to MRSG_Host4 
+[MRSG_Host4:compute_mrsg:(927) 14.002829] [msg_test/INFO]  MRSG_Reduce task 103 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.004130] [msg_test/INFO] reduce 104 assigned to MRSG_Host5 
+[MRSG_Host5:compute_mrsg:(928) 14.005431] [msg_test/INFO]  MRSG_Reduce task 104 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.006732] [msg_test/INFO] reduce 105 assigned to MRSG_Host6 
+[MRSG_Host6:compute_mrsg:(929) 14.008033] [msg_test/INFO]  MRSG_Reduce task 105 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.009334] [msg_test/INFO] reduce 106 assigned to MRSG_Host7 
+[MRSG_Host7:compute_mrsg:(930) 14.010635] [msg_test/INFO]  MRSG_Reduce task 106 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.011936] [msg_test/INFO] reduce 107 assigned to MRSG_Host8 
+[MRSG_Host8:compute_mrsg:(931) 14.013237] [msg_test/INFO]  MRSG_Reduce task 107 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.014538] [msg_test/INFO] reduce 108 assigned to MRSG_Host9 
+[MRSG_Host9:compute_mrsg:(932) 14.015839] [msg_test/INFO]  MRSG_Reduce task 108 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.017140] [msg_test/INFO] reduce 109 assigned to MRSG_Host10 
+[MRSG_Host10:compute_mrsg:(933) 14.018441] [msg_test/INFO]  MRSG_Reduce task 109 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.019742] [msg_test/INFO] reduce 110 assigned to MRSG_Host11 
+[MRSG_Host11:compute_mrsg:(934) 14.021043] [msg_test/INFO]  MRSG_Reduce task 110 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.022344] [msg_test/INFO] reduce 111 assigned to MRSG_Host12 
+[MRSG_Host12:compute_mrsg:(935) 14.023645] [msg_test/INFO]  MRSG_Reduce task 111 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.024946] [msg_test/INFO] reduce 112 assigned to MRSG_Host13 
+[MRSG_Host13:compute_mrsg:(936) 14.026247] [msg_test/INFO]  MRSG_Reduce task 112 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.027548] [msg_test/INFO] reduce 113 assigned to MRSG_Host14 
+[MRSG_Host14:compute_mrsg:(937) 14.028849] [msg_test/INFO]  MRSG_Reduce task 113 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.030150] [msg_test/INFO] reduce 114 assigned to MRSG_Host15 
+[MRSG_Host15:compute_mrsg:(938) 14.031451] [msg_test/INFO]  MRSG_Reduce task 114 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.032752] [msg_test/INFO] reduce 115 assigned to MRSG_Host16 
+[MRSG_Host16:compute_mrsg:(939) 14.034053] [msg_test/INFO]  MRSG_Reduce task 115 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.035354] [msg_test/INFO] reduce 116 assigned to MRSG_Host17 
+[MRSG_Host17:compute_mrsg:(940) 14.036655] [msg_test/INFO]  MRSG_Reduce task 116 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.037956] [msg_test/INFO] reduce 117 assigned to MRSG_Host18 
+[MRSG_Host18:compute_mrsg:(941) 14.039257] [msg_test/INFO]  MRSG_Reduce task 117 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.040558] [msg_test/INFO] reduce 118 assigned to MRSG_Host19 
+[MRSG_Host19:compute_mrsg:(942) 14.041859] [msg_test/INFO]  MRSG_Reduce task 118 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.043160] [msg_test/INFO] reduce 119 assigned to MRSG_Host20 
+[MRSG_Host20:compute_mrsg:(943) 14.044461] [msg_test/INFO]  MRSG_Reduce task 119 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.045762] [msg_test/INFO] reduce 120 assigned to MRSG_Host21 
+[MRSG_Host21:compute_mrsg:(944) 14.047063] [msg_test/INFO]  MRSG_Reduce task 120 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.048364] [msg_test/INFO] reduce 121 assigned to MRSG_Host22 
+[MRSG_Host22:compute_mrsg:(945) 14.049665] [msg_test/INFO]  MRSG_Reduce task 121 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.050966] [msg_test/INFO] reduce 122 assigned to MRSG_Host23 
+[MRSG_Host23:compute_mrsg:(946) 14.052267] [msg_test/INFO]  MRSG_Reduce task 122 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.053568] [msg_test/INFO] reduce 123 assigned to MRSG_Host24 
+[MRSG_Host24:compute_mrsg:(947) 14.054869] [msg_test/INFO]  MRSG_Reduce task 123 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.056170] [msg_test/INFO] reduce 124 assigned to MRSG_Host25 
+[MRSG_Host25:compute_mrsg:(948) 14.057471] [msg_test/INFO]  MRSG_Reduce task 124 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.058772] [msg_test/INFO] reduce 125 assigned to MRSG_Host26 
+[MRSG_Host26:compute_mrsg:(949) 14.060073] [msg_test/INFO]  MRSG_Reduce task 125 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.061374] [msg_test/INFO] reduce 126 assigned to MRSG_Host27 
+[MRSG_Host27:compute_mrsg:(950) 14.062675] [msg_test/INFO]  MRSG_Reduce task 126 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.063976] [msg_test/INFO] reduce 127 assigned to MRSG_Host28 
+[MRSG_Host28:compute_mrsg:(951) 14.065277] [msg_test/INFO]  MRSG_Reduce task 127 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.066578] [msg_test/INFO] reduce 128 assigned to MRSG_Host29 
+[MRSG_Host29:compute_mrsg:(952) 14.067879] [msg_test/INFO]  MRSG_Reduce task 128 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.069180] [msg_test/INFO] reduce 129 assigned to MRSG_Host30 
+[MRSG_Host30:compute_mrsg:(953) 14.070481] [msg_test/INFO]  MRSG_Reduce task 129 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.071782] [msg_test/INFO] reduce 130 assigned to MRSG_Host31 
+[MRSG_Host31:compute_mrsg:(954) 14.073083] [msg_test/INFO]  MRSG_Reduce task 130 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.074384] [msg_test/INFO] reduce 131 assigned to MRSG_Host32 
+[MRSG_Host32:compute_mrsg:(955) 14.075685] [msg_test/INFO]  MRSG_Reduce task 131 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.076986] [msg_test/INFO] reduce 132 assigned to MRSG_Host33 
+[MRSG_Host33:compute_mrsg:(956) 14.078287] [msg_test/INFO]  MRSG_Reduce task 132 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.079588] [msg_test/INFO] reduce 133 assigned to MRSG_Host34 
+[MRSG_Host34:compute_mrsg:(957) 14.080889] [msg_test/INFO]  MRSG_Reduce task 133 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.082190] [msg_test/INFO] reduce 134 assigned to MRSG_Host35 
+[MRSG_Host35:compute_mrsg:(958) 14.083491] [msg_test/INFO]  MRSG_Reduce task 134 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.084792] [msg_test/INFO] reduce 135 assigned to MRSG_Host36 
+[MRSG_Host36:compute_mrsg:(959) 14.086093] [msg_test/INFO]  MRSG_Reduce task 135 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.087394] [msg_test/INFO] reduce 136 assigned to MRSG_Host37 
+[MRSG_Host37:compute_mrsg:(960) 14.088695] [msg_test/INFO]  MRSG_Reduce task 136 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.089996] [msg_test/INFO] reduce 137 assigned to MRSG_Host38 
+[MRSG_Host38:compute_mrsg:(961) 14.091297] [msg_test/INFO]  MRSG_Reduce task 137 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.092598] [msg_test/INFO] reduce 138 assigned to MRSG_Host39 
+[MRSG_Host39:compute_mrsg:(962) 14.093899] [msg_test/INFO]  MRSG_Reduce task 138 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.095200] [msg_test/INFO] reduce 139 assigned to MRSG_Host40 
+[MRSG_Host40:compute_mrsg:(963) 14.096501] [msg_test/INFO]  MRSG_Reduce task 139 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.097802] [msg_test/INFO] reduce 140 assigned to MRSG_Host41 
+[MRSG_Host41:compute_mrsg:(964) 14.099103] [msg_test/INFO]  MRSG_Reduce task 140 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.100404] [msg_test/INFO] reduce 141 assigned to MRSG_Host42 
+[MRSG_Host42:compute_mrsg:(965) 14.101705] [msg_test/INFO]  MRSG_Reduce task 141 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.103006] [msg_test/INFO] reduce 142 assigned to MRSG_Host43 
+[MRSG_Host43:compute_mrsg:(966) 14.104307] [msg_test/INFO]  MRSG_Reduce task 142 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.105608] [msg_test/INFO] reduce 143 assigned to MRSG_Host44 
+[MRSG_Host44:compute_mrsg:(967) 14.106909] [msg_test/INFO]  MRSG_Reduce task 143 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.108210] [msg_test/INFO] reduce 144 assigned to MRSG_Host45 
+[MRSG_Host45:compute_mrsg:(968) 14.109511] [msg_test/INFO]  MRSG_Reduce task 144 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.110812] [msg_test/INFO] reduce 145 assigned to MRSG_Host46 
+[MRSG_Host46:compute_mrsg:(969) 14.112113] [msg_test/INFO]  MRSG_Reduce task 145 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.113414] [msg_test/INFO] reduce 146 assigned to MRSG_Host47 
+[MRSG_Host47:compute_mrsg:(970) 14.114715] [msg_test/INFO]  MRSG_Reduce task 146 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.116016] [msg_test/INFO] reduce 147 assigned to MRSG_Host48 
+[MRSG_Host48:compute_mrsg:(971) 14.117317] [msg_test/INFO]  MRSG_Reduce task 147 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.118618] [msg_test/INFO] reduce 148 assigned to MRSG_Host49 
+[MRSG_Host49:compute_mrsg:(972) 14.119919] [msg_test/INFO]  MRSG_Reduce task 148 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.121220] [msg_test/INFO] reduce 149 assigned to MRSG_Host50 
+[MRSG_Host50:compute_mrsg:(973) 14.122521] [msg_test/INFO]  MRSG_Reduce task 149 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.123822] [msg_test/INFO] reduce 150 assigned to MRSG_Host51 
+[MRSG_Host51:compute_mrsg:(974) 14.125123] [msg_test/INFO]  MRSG_Reduce task 150 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.126424] [msg_test/INFO] reduce 151 assigned to MRSG_Host52 
+[MRSG_Host52:compute_mrsg:(975) 14.127725] [msg_test/INFO]  MRSG_Reduce task 151 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.129026] [msg_test/INFO] reduce 152 assigned to MRSG_Host53 
+[MRSG_Host53:compute_mrsg:(976) 14.130327] [msg_test/INFO]  MRSG_Reduce task 152 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.131628] [msg_test/INFO] reduce 153 assigned to MRSG_Host54 
+[MRSG_Host54:compute_mrsg:(977) 14.132929] [msg_test/INFO]  MRSG_Reduce task 153 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.134230] [msg_test/INFO] reduce 154 assigned to MRSG_Host55 
+[MRSG_Host55:compute_mrsg:(978) 14.135531] [msg_test/INFO]  MRSG_Reduce task 154 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.136832] [msg_test/INFO] reduce 155 assigned to MRSG_Host56 
+[MRSG_Host56:compute_mrsg:(979) 14.138133] [msg_test/INFO]  MRSG_Reduce task 155 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.139434] [msg_test/INFO] reduce 156 assigned to MRSG_Host57 
+[MRSG_Host57:compute_mrsg:(980) 14.140735] [msg_test/INFO]  MRSG_Reduce task 156 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.142036] [msg_test/INFO] reduce 157 assigned to MRSG_Host58 
+[MRSG_Host58:compute_mrsg:(981) 14.143337] [msg_test/INFO]  MRSG_Reduce task 157 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.144638] [msg_test/INFO] reduce 158 assigned to MRSG_Host59 
+[MRSG_Host59:compute_mrsg:(982) 14.145939] [msg_test/INFO]  MRSG_Reduce task 158 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.147240] [msg_test/INFO] reduce 159 assigned to MRSG_Host60 
+[MRSG_Host60:compute_mrsg:(983) 14.148541] [msg_test/INFO]  MRSG_Reduce task 159 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.149842] [msg_test/INFO] reduce 160 assigned to MRSG_Host61 
+[MRSG_Host61:compute_mrsg:(984) 14.151143] [msg_test/INFO]  MRSG_Reduce task 160 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.152444] [msg_test/INFO] reduce 161 assigned to MRSG_Host62 
+[MRSG_Host62:compute_mrsg:(985) 14.153745] [msg_test/INFO]  MRSG_Reduce task 161 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.155046] [msg_test/INFO] reduce 162 assigned to MRSG_Host63 
+[MRSG_Host63:compute_mrsg:(986) 14.156347] [msg_test/INFO]  MRSG_Reduce task 162 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.157648] [msg_test/INFO] reduce 163 assigned to MRSG_Host64 
+[MRSG_Host64:compute_mrsg:(987) 14.158949] [msg_test/INFO]  MRSG_Reduce task 163 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.160250] [msg_test/INFO] reduce 164 assigned to MRSG_Host65 
+[MRSG_Host65:compute_mrsg:(988) 14.161551] [msg_test/INFO]  MRSG_Reduce task 164 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.162852] [msg_test/INFO] reduce 165 assigned to MRSG_Host66 
+[MRSG_Host66:compute_mrsg:(989) 14.164153] [msg_test/INFO]  MRSG_Reduce task 165 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.165454] [msg_test/INFO] reduce 166 assigned to MRSG_Host67 
+[MRSG_Host67:compute_mrsg:(990) 14.166755] [msg_test/INFO]  MRSG_Reduce task 166 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.168056] [msg_test/INFO] reduce 167 assigned to MRSG_Host68 
+[MRSG_Host68:compute_mrsg:(991) 14.169357] [msg_test/INFO]  MRSG_Reduce task 167 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.170658] [msg_test/INFO] reduce 168 assigned to MRSG_Host69 
+[MRSG_Host69:compute_mrsg:(992) 14.171959] [msg_test/INFO]  MRSG_Reduce task 168 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.173260] [msg_test/INFO] reduce 169 assigned to MRSG_Host70 
+[MRSG_Host70:compute_mrsg:(993) 14.174561] [msg_test/INFO]  MRSG_Reduce task 169 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.175862] [msg_test/INFO] reduce 170 assigned to MRSG_Host71 
+[MRSG_Host71:compute_mrsg:(994) 14.177163] [msg_test/INFO]  MRSG_Reduce task 170 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.178464] [msg_test/INFO] reduce 171 assigned to MRSG_Host72 
+[MRSG_Host72:compute_mrsg:(995) 14.179765] [msg_test/INFO]  MRSG_Reduce task 171 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.181066] [msg_test/INFO] reduce 172 assigned to MRSG_Host73 
+[MRSG_Host73:compute_mrsg:(996) 14.182367] [msg_test/INFO]  MRSG_Reduce task 172 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.183668] [msg_test/INFO] reduce 173 assigned to MRSG_Host74 
+[MRSG_Host74:compute_mrsg:(997) 14.184969] [msg_test/INFO]  MRSG_Reduce task 173 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.186270] [msg_test/INFO] reduce 174 assigned to MRSG_Host75 
+[MRSG_Host75:compute_mrsg:(998) 14.187571] [msg_test/INFO]  MRSG_Reduce task 174 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.188872] [msg_test/INFO] reduce 175 assigned to MRSG_Host76 
+[MRSG_Host76:compute_mrsg:(999) 14.190173] [msg_test/INFO]  MRSG_Reduce task 175 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.191474] [msg_test/INFO] reduce 176 assigned to MRSG_Host77 
+[MRSG_Host77:compute_mrsg:(1000) 14.192775] [msg_test/INFO]  MRSG_Reduce task 176 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.194076] [msg_test/INFO] reduce 177 assigned to MRSG_Host78 
+[MRSG_Host78:compute_mrsg:(1001) 14.195377] [msg_test/INFO]  MRSG_Reduce task 177 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.196678] [msg_test/INFO] reduce 178 assigned to MRSG_Host79 
+[MRSG_Host79:compute_mrsg:(1002) 14.197979] [msg_test/INFO]  MRSG_Reduce task 178 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.199280] [msg_test/INFO] reduce 179 assigned to MRSG_Host80 
+[MRSG_Host80:compute_mrsg:(1003) 14.200581] [msg_test/INFO]  MRSG_Reduce task 179 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.201882] [msg_test/INFO] reduce 180 assigned to MRSG_Host81 
+[MRSG_Host81:compute_mrsg:(1004) 14.203183] [msg_test/INFO]  MRSG_Reduce task 180 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.204484] [msg_test/INFO] reduce 181 assigned to MRSG_Host82 
+[MRSG_Host82:compute_mrsg:(1005) 14.205785] [msg_test/INFO]  MRSG_Reduce task 181 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.207086] [msg_test/INFO] reduce 182 assigned to MRSG_Host83 
+[MRSG_Host83:compute_mrsg:(1006) 14.208387] [msg_test/INFO]  MRSG_Reduce task 182 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.209688] [msg_test/INFO] reduce 183 assigned to MRSG_Host84 
+[MRSG_Host84:compute_mrsg:(1007) 14.210989] [msg_test/INFO]  MRSG_Reduce task 183 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.212290] [msg_test/INFO] reduce 184 assigned to MRSG_Host85 
+[MRSG_Host85:compute_mrsg:(1008) 14.213591] [msg_test/INFO]  MRSG_Reduce task 184 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.214892] [msg_test/INFO] reduce 185 assigned to MRSG_Host86 
+[MRSG_Host86:compute_mrsg:(1009) 14.216193] [msg_test/INFO]  MRSG_Reduce task 185 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.217494] [msg_test/INFO] reduce 186 assigned to MRSG_Host87 
+[MRSG_Host87:compute_mrsg:(1010) 14.218795] [msg_test/INFO]  MRSG_Reduce task 186 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.220096] [msg_test/INFO] reduce 187 assigned to MRSG_Host88 
+[MRSG_Host88:compute_mrsg:(1011) 14.221397] [msg_test/INFO]  MRSG_Reduce task 187 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.222698] [msg_test/INFO] reduce 188 assigned to MRSG_Host89 
+[MRSG_Host89:compute_mrsg:(1012) 14.223999] [msg_test/INFO]  MRSG_Reduce task 188 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.225300] [msg_test/INFO] reduce 189 assigned to MRSG_Host90 
+[MRSG_Host90:compute_mrsg:(1013) 14.226601] [msg_test/INFO]  MRSG_Reduce task 189 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.227902] [msg_test/INFO] reduce 190 assigned to MRSG_Host91 
+[MRSG_Host91:compute_mrsg:(1014) 14.229203] [msg_test/INFO]  MRSG_Reduce task 190 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.230504] [msg_test/INFO] reduce 191 assigned to MRSG_Host92 
+[MRSG_Host92:compute_mrsg:(1015) 14.231805] [msg_test/INFO]  MRSG_Reduce task 191 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.233106] [msg_test/INFO] reduce 192 assigned to MRSG_Host93 
+[MRSG_Host93:compute_mrsg:(1016) 14.234407] [msg_test/INFO]  MRSG_Reduce task 192 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.235708] [msg_test/INFO] reduce 193 assigned to MRSG_Host94 
+[MRSG_Host94:compute_mrsg:(1017) 14.237009] [msg_test/INFO]  MRSG_Reduce task 193 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.238310] [msg_test/INFO] reduce 194 assigned to MRSG_Host95 
+[MRSG_Host95:compute_mrsg:(1018) 14.239611] [msg_test/INFO]  MRSG_Reduce task 194 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.240912] [msg_test/INFO] reduce 195 assigned to MRSG_Host96 
+[MRSG_Host96:compute_mrsg:(1019) 14.242213] [msg_test/INFO]  MRSG_Reduce task 195 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.243514] [msg_test/INFO] reduce 196 assigned to MRSG_Host97 
+[MRSG_Host97:compute_mrsg:(1020) 14.244815] [msg_test/INFO]  MRSG_Reduce task 196 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.246116] [msg_test/INFO] reduce 197 assigned to MRSG_Host98 
+[MRSG_Host98:compute_mrsg:(1021) 14.247417] [msg_test/INFO]  MRSG_Reduce task 197 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.248718] [msg_test/INFO] reduce 198 assigned to MRSG_Host99 
+[MRSG_Host99:compute_mrsg:(1022) 14.250019] [msg_test/INFO]  MRSG_Reduce task 198 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 14.251320] [msg_test/INFO] reduce 199 assigned to MRSG_Host100 
+[MRSG_Host100:compute_mrsg:(1023) 14.252621] [msg_test/INFO]  MRSG_Reduce task 199 sent 8589824 Bytes
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO]  
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] MRSG_REDUCE PHASE DONE
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO]  
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] JOB CONFIGURATION:
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] slots: 2 map, 2 reduce
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] chunk replicas: 3
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] chunk size: 64 MB
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] input chunks: 128
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] input size: 8192 MB
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] maps: 128
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] MRSG_map_output size: 67109 Bytes
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] reduces: 200
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] workers: 100
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] grid power: 5e+11 flops
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] average power: 5e+09 flops/s
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] mrsg_heartbeat interval: 3s
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO]  
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] JOB STATISTICS:
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] local maps: 128
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] non-local maps: 0
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] speculative maps (local): 0
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] speculative maps (remote): 0
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] total non-local maps: 0
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] total speculative maps: 0
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] normal reduces: 200
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] speculative reduces: 0
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] Map Time: 13.821207s
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] Reduce Time: 137.492732s
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO]  
+[MRSG_Host0:master_mrsg:(67) 151.313939] [msg_test/INFO] JOB END
+Segmentation fault.

@@ -77,28 +77,28 @@ else:
 output.write('\n')
 if len(bandwidth) == 1:
 	for i in range(1,numNodes):
-		output.write('\t<link id="mra_l' + str(i) + '" bandwidth="' + str(bandwidth[0]) + 'Bps" latency="' +  str(latency[0]) + 's" />\n')
+		output.write('\t<link id="mra_l' + str(i) + '" bandwidth="' + str(bandwidth[0]) + '" latency="' +  str(latency[0]) + 's" />\n')
 
 elif len(latency) ==1:
 	for i in range(1,numNodes):
 		rBW = random.uniform (bandwidth[0], bandwidth[1])
-		output.write('\t<link id="mra_l' + str(i) + '" bandwidth="' + str(rBW) + 'Bps" latency="' + str(latency[0]) + 's" />\n')
+		output.write('\t<link id="mra_l' + str(i) + '" bandwidth="' + str(rBW) + '" latency="' + str(latency[0]) + 's" />\n')
 		
 
 elif (len(bandwidth) == 1 and len(latency) ==1):
 	for i in range(1,numNodes):
-		output.write('\t<link id="mra_l' + str(i) + '" bandwidth="' + str(bandwidth[0]) + 'Bps" latency="' + str(latency[0]) + 's" />\n')
+		output.write('\t<link id="mra_l' + str(i) + '" bandwidth="' + str(bandwidth[0]) + '" latency="' + str(latency[0]) + 's" />\n')
 
 else:
 	for i in range(1,numNodes):
 		rBW = random.uniform (bandwidth[0], bandwidth[1])
 		rLat = random.uniform (latency[0], latency[1])
-		output.write('\t<link id="mra_l' + str(i) + '" bandwidth="' + str(rBW) + 'Bps" latency="' + str(rLat) + 's" />\n')
+		output.write('\t<link id="mra_l' + str(i) + '" bandwidth="' + str(rBW) + '" latency="' + str(rLat) + 's" />\n')
 
 #if else:
 #	for i in range(1,numNodes):
 #		rBW = random.uniform (bandwidth[0], bandwidth[1])
-#		output.write('\t<link id="mra_l' + str(i) + '" bandwidth="' + str(rBW) + 'Bps" latency="' + latency + '" />\n')
+#		output.write('\t<link id="mra_l' + str(i) + '" bandwidth="' + str(rBW) + '" latency="' + latency + '" />\n')
 
 # Topology (paths) definition.
 output.write('\n')
@@ -168,28 +168,28 @@ else:
 output.write('\n')
 if len(bandwidth) == 1:
 	for i in range(1,numNodes):
-		 output.write('\t<link id="l' + str(i) + '" bandwidth="' + str(bandwidth[0]) + 'Bps" latency="' + str(latency[0]) + 's" />\n')
+		 output.write('\t<link id="l' + str(i) + '" bandwidth="' + str(bandwidth[0]) + '" latency="' + str(latency[0]) + 's" />\n')
 
 elif len(latency) ==1:
 	for i in range(1,numNodes):
 		rBW = random.uniform (bandwidth[0], bandwidth[1])
-		output.write('\t<link id="l' + str(i) + '" bandwidth="' + str(rBW) + 'Bps" latency="' + str(latency[0]) + 's" />\n')
+		output.write('\t<link id="l' + str(i) + '" bandwidth="' + str(rBW) + '" latency="' + str(latency[0]) + 's" />\n')
 		
 
 elif (len(bandwidth) == 1 and len(latency) ==1):
 	for i in range(1,numNodes):
-		output.write('\t<link id="l' + str(i) + '" bandwidth="' + str(bandwidth[0]) + 'Bps" latency="' + str(latency[0]) + 's" />\n')
+		output.write('\t<link id="l' + str(i) + '" bandwidth="' + str(bandwidth[0]) + '" latency="' + str(latency[0]) + 's" />\n')
 
 else:
 	for i in range(1,numNodes):
 		rBW = random.uniform (bandwidth[0], bandwidth[1])
 		rLat = random.uniform (latency[0], latency[1])
-		output.write('\t<link id="l' + str(i) + '" bandwidth="' + str(rBW) + 'Bps" latency="' + str(rLat) + 's" />\n')
+		output.write('\t<link id="l' + str(i) + '" bandwidth="' + str(rBW) + '" latency="' + str(rLat) + 's" />\n')
 
 #if else:
 #	for i in range(1,numNodes):
 #		rBW = random.uniform (bandwidth[0], bandwidth[1])
-#		output.write('\t<link id="l' + str(i) + '" bandwidth="' + str(rBW) + 'Bps" latency="' + latency + '" />\n')
+#		output.write('\t<link id="l' + str(i) + '" bandwidth="' + str(rBW) + '" latency="' + latency + '" />\n')
 
 # Topology (paths) definition.
 output.write('\n')

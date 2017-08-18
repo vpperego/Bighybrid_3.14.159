@@ -1,5 +1,5 @@
 machines,cores_per_node,cpu_power,lat,bandwidth,mrsg_reduces,mrsg_chunk_size,mrsg_input_chunks,mrsg_dfs_replicas,mrsg_map_slots,mrsg_reduce_slots,mrsg_intermed_perc,mrsg_map_task_cost,mrsg_reduce_task_cost
-100,2,5.0e9,1.0e-4,10M,200,64,128,3,2,2,20,1.0e+9,1.0e+9
-100,2,5.0e9,1.0e-4,10M,200,64,128,3,2,2,20,1.0e+9,1.0e+9
-100,2,5.0e9,1.0e-4,10M,200,64,128,3,2,2,20,1.0e+9,1.0e+9
-100,2,5.0e9,1.0e-4,10M,200,64,128,3,2,2,20,1.0e+9,1.0e+9
+100,2,5.0e9,1.0e-4,10Mbps,200,64,128,3,2,2,20,1.0e+9,1.0e+9
+100,2,5.0e9,1.0e-4,10Mbps,200,64,128,3,2,2,20,1.0e+9,1.0e+9
+100,2,5.0e9,1.0e-4,10Mbps,200,64,128,3,2,2,20,1.0e+9,1.0e+9
+100,2,5.0e9,1.0e-4,10Mbps,200,64,128,3,2,2,20,1.0e+9,1.0e+9
